@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FTA-DBMS App</title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="fundamentals.html" class="logo" ><img src="images/back.png"  style="width:30px;height:30px;"></a>
+
+      
+   </section>
+
+</header>
+
+<!-- header section ends -->
+<br><br><br>
+<!-- home section starts  -->
+
+<section class="home" id="home">
+   <div class="row">
+      <div class="content">
+        <h3>Lesson 9<span><br>Normalization</span></h3>
+      </div>
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Topics</h2>
+            <ul>
+               <li>Data modeling and redundancy</li>
+               <li>Dta dependency
+                  <ul>
+                     <li>Determinants and Keys</li>
+                     <li>Functional dependency</li>
+                     <li>Partial Dependency</li>
+                     <li>Transitive dependency</li>
+                  </ul></li>
+               <li>1<sup>st</sup> Noramal Form(1NF)</li>
+               <li>2<sup>nd</sup> Noramal Form(1NF)</li>
+               <li>3<sup>rd</sup> Noramal Form(1NF)</li>
+               <li>Boyce-Codd Normal Form (BCNF)</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Data Modeling and Redundancy</h2>
+            <ul>
+               <li>Database design is the techniques used for organizing data in a database.</li>
+               <li>A good design should avoid data redundancy, and data anomalies.
+                  <ul>
+                     <li><b>Update anomalies </b>- Example, you try to update a data item having several copies at different places, a few instances get updated properly while a few others are left with old values.</li>
+                     <li><b>Deletion anomalies </b>- You tried to delete a record, but a second copy of it remained undeleted.</li>
+                     <li><b>Insert anomalies - </b>You tried to insert data in a record that does not exist at all.</li>
+                  </ul></li>
+               <li>Normalization is a systematic approach of decomposing tables to eliminate data redundancy and anomalies.</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Data Dependency</h2>
+            <ul>
+               <li>If the value of a field, B, depends on the value of field, A, we say B depends on A or
+                  <ul>
+                     <li>A &#8594; B</li>
+                  </ul></li>
+               <li>Attribute on the <i>left hand side</i> is known <i>determinant</i>
+                  <ul>
+                     <li>EmpNum is a determinant of EmpEmail</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Functional Dependencies</h2>
+            <ul>
+               <li>An attribute, B, has a functional dependency on another attribute, A, if the value of B is determined by the value of A.</li>
+               <li>Functional dependency means that for any two records, which have the same value for A, then the values for B in these two records must be the same.</li>
+               <li>We illustratr this as:
+                  <ul>
+                     <li>&#8594;</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Functional Dependencies</h2>
+            <img src="images/example118.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Partial Dependency</h2>
+            <ul>
+               <li>A <b>partial dependency</b> exists when an attribute B is functionally dependent on an attribute A, and A is a component of a multipart candidate key.</li>
+               <img src="images/example119.png">
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Transitive Dependency </h2>
+            <ul>
+               <li>If a field C depends on a field B which depends on a key fieldsuch as A, it is said that C depends on A transitively.
+                  <br>(C is transitively dependent on A through B)</li>
+                  <img src="images/example120.png">
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>First Normal Form (1NF)</h2>
+            <ul>
+               <li>We say a relation is in <b>1NF</b> if all values stored in the relation are single-valued and atomic</li>
+               <br>
+               <li>1NF places restrictions on the structure of relations. Values must be simple</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>First Normal Form (1NF)</h2>
+            <img src="images/example121.png">
+            <ul style="list-style-type: none;">
+               <li>EmpDegress is a multi-valued field:
+                  <ul style="list-style-type: none;">
+                     <li>employee 679 has two degress: <i>BSc</i> and <i>MSc</i></li>
+                     <li>employee 333 has three degrees: <i>BA,BSc,PhD</i></li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>First Normal Form (1NF)</h2>
+            <ul>
+               <li>To put the table in the 1NF, convert the tables= as shown:</li>
+               <img src="images/example122.png">
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Second Normal Form</h2>
+            <ul>
+               <li>A relation is in 2NF if it is in 1NF, and every <b><i>non-key</i></b> attribute is fully dependent on each <b><i>candidate key.</i></b> (That is, we don’t have any partial functional dependency.)</li>
+               <br>
+               <li>•  A <i>key attribute</i> is any attribute that is part of a key; any attribute that is not a key attribute, is a <i>non-key attribute.</i></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Table Violating Second Normal Form</h2>
+            <img src="images/example123.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Tables Conforming to Second Normal Form</h2>
+            <img src="images/example124.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Third Normal Form</h2>
+            <ul>
+               <li>Third normal form (3NF) requires that there are no functional dependencies of non-key attributes other than a candidate key.</li>
+               <br>
+               <li>A table is in 3NF if all of the non-primary key attributes are mutually independent</li>
+               <br>
+               <li>there should not be transitive dependencies</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Third Normal Form</h2>
+            <img src="images/example125.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Boyce-Codd Normal Form (BCNF)</h2>
+          <ul>
+             <li>BCNF does not allow dependencies between attributes that belong to candidate keys.</li>
+             <li>BCNF is a refinement of the third normal form in which it drops the restriction of a non-key attribute from the 3rd normal form.</li>
+             <li>Third normal form and BCNF are not the same if the following conditions are true:
+               <ul>
+                  <li>The table has two or more candidate keys</li>
+                  <li>At least two of the candidate keys are composed of more than one attribute</li>
+                  <li>The keys are not disjoint i.e. The composite candidate keys share some attributes</li>
+               </ul></li>
+          </ul>  
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Example</h2>
+            <ul style="list-style-type: none;">
+               <li><font color="50c878">Movie(Not in BCNF)</font></li>
+                  <li>Schema &#8594; {MovieTitle, MovieID, ArtistName, Role, Payment }
+                     <ol>
+                        <li>Key1 &#8594; {MovieTitle, ArtistName}</li>
+                        <li>Key2 &#8594; </li>
+                        <li>Both role and payment functionally depend on both candidate keys thus 3NF</li>
+                        <li>{MovieID} &#8594; {MovieTitle}</li>
+                        <li>Dependency between MovieID & Movietitle Violated BCNF</li>
+                     </ol></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Decomposition of Tables</h2>
+            <ul>
+               <li>Place all attributes except for the dependent attribute of the candidate key, in a table</li>
+               <br>
+               <li>Place the dependent attributes of the two candidate keys in separate tables</li>
+               <br>
+               <li>Make sure that no relationship is lost</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Example in BCNF</h2>
+            <ul>
+               <li>Old Schema: {MovieTitle, MovieID, ArtistName, Role, Payment }</li>
+               <li>New Scheme: {MovieID, ArtistName, Role, Payment}</li>
+               <li>New Scheme: {MovieTitle, ArtistName}</li>
+               <li><font color="50c878">Loss of relationship</font> {MovieID} &#8594; {MovieTitle}</li>
+               <li>New Schema: {MovieID, ArtistName, Role, Payment}</li>
+               <li>New Schema: {MovieID, MovieTitle}</li>
+               <li>The relationship{MovieID} &#8594; {MovieTitle} is preserved</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+
+
+</body>
+
+
+<!-- reviews section ends -->
+
+<!-- couter section ends -->
+
+<!-- about section starts  -->
+<br><br>
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section>
+
+      <div class="credit">&copy; copyright @ 2022 by <span>PCNL FTA-DBMS</span> | All rights reserved!</div>
+
+   </section>
+
+</footer>
+
+<!-- footer section ends -->
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

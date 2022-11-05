@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FTA-DBMS App</title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="fundamentals.html" class="logo" ><img src="images/back.png"  style="width:30px;height:30px;"></a>
+
+      
+   </section>
+
+</header>
+
+<!-- header section ends -->
+<br><br><br>
+<!-- home section starts  -->
+
+<section class="home" id="home">
+   <div class="row">
+      <div class="content">
+        <h3>Lesson 2.2<span><br>Database Models and ER Model</span></h3>
+      </div>
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>DATA MODELS</h2>
+            <ul>
+               <li style="list-style-type: none;"><b>Data Models </b>define how the logical structure of a database is modeled. Data models define how data is connected to each other and how they are processed and stored inside the system.<br><br>
+              <b>Evolution of Data Models</b>
+               <ol>
+                  <li><b>File System</b> – used mainly on IBM mainframe systems
+                     <br>Ex. Virtual Memory System (VMS) and Virtual Storage Access Method(VSAM)</li>
+                  <li><b>Hierarchical and Network Model</b>
+                     <br>Ex.  Info.  Mgmt.  System  (IMS),  Adaptable  Data  Base  System  (ADABAS), Integrated Data Store (IDS) II</li>
+                  <li><b>Relational</b> –  Entity  Relationship  Modeling  and  support    for  relational  data modeling
+                     <br>Ex. Oracle, MS SQL Server, MySQL, DB2</li>
+                  <li><b>Object-Oriented</b> – support object data types, web databases become common
+                     <br>Ex. Versant, DB2 Universal Database(UDB), Oracle 11g</li>
+                  <li><b>Extensible Markup Language (XML) Hybrid DBMS</b> – support XML documents
+                     <br>Ex. dbXML, Tamino</li>
+                  <li><b>NoSQL</b> – distributed, highly scalable, high performance, very large storage(petabytes)
+                     <br>Ex. SimpleDB(Amazon), BigTable (Google) and Cassandra(Apache)</li>
+               </ol></li>    
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Entity-Relationship (ER) Model</h2>
+            <ul>
+               <li style="list-style-type: none;"><b>Entity-Relationship (ER) Model </b>is based on the notion of real-world entities and relationships among them. While formulating real-world scenario into the database model, the ER Model creates entity set, relationship set, general attributes and constraints.
+                  <br><br>ER Model is best used for the conceptual design of a database.
+                  <br>ER Model is based on −
+                  <ul>
+                     <li style="list-style-type: none;"><b>Entities</b> and their attributes
+                     <br><b>Relationships</b> among entities</li>
+                  </ul></li>
+               <li style="list-style-type: none;"><br>These concepts are explained below.<br>
+               <img src="images/example12.png">
+               <ul>
+                  <li style="list-style-type: none;">
+                     <b>Entity −</b> An entity in an ER Model is a real-world entity having properties called <b>attributes</b>.   Every <b>attribute</b> is   defined   by   its   set   of   values called <b>domain</b>. For example, in a school database, a student is considered as an entity. Student has various attributes like name, age, class, etc.
+                     <br><br>
+                     <b>Relationship −</b> The   logical   association   among   entities   is   called relationship. Relationships are mapped with entities in various ways. Mapping cardinalities define the number of association between two entities.
+                     <br><br>
+                     Mapping Cardinalities -
+                     <ul><ul>
+                        <li>one to one</li>
+                        <li>one to many</li>
+                        <li>many to one</li>
+                        <li>many to many</li>
+                     </ul></ul>
+                  </li>
+               </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Relational Model</h2>
+            <ul style="list-style-type: none;">
+               <li>The most popular data model in DBMS is the Relational Model. It is more scientific model than others. This model is based on first-order predicate logic</li>
+               <img src="images/example13.jpg">
+               <li><b>Concepts</b>
+               <ul style="list-style-type: none;">
+                  <li><b>Tables - </b>In relational data model, relations are saved in the format of Tables. This format stores the relation among entities. A table has rows and columns, where a row represents <b>records</b> and columns represent the <b>attributes</b>.
+                  <br><br>
+                  <b>Tuple - </b>A single row of a table, which contains a single record for that relation is called a tuple.</li>
+               </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Types of Keys</h2>
+            <ol>
+               <li><b>Primary Key</b></li>
+               <p>A primary key is a candidate key that is most appropriate to be the main reference key for the table. As its name suggests, it is the primary key of reference for the table and is used throughout the database to help establish relationships with other tables. As with any candidate key the primary key must contain unique values, must never be null and uniquely identify each record in the table. </p><br>
+               <p>As an example, a student id might be a primary key in a student table. In the table below we have selected the candidate key student_id to be our most appropriate primary key</p>
+               <img src="images/example14.png">
+               <p>Primary keys are mandatory for every table each record must have a value for its primary key. When choosing a primary key from the pool of candidate keys always choose a single simple key.</p>
+               <br>
+               <li><b>Foreign Key</b></li>
+               <p>A foreign key is generally a primary key from one table that appears as a field in another where the first table has a relationship to the second. In other words, if we had a table A with a primary key X that linked to a table B where X was a field in B, then X would be a foreign key in B.</p><br>
+               <p>An example might be a student table that contains the course_id the student is attending. Another table lists the courses on offer with course_id being the primary key. The 2 tables are linked through course_id and as such course_id would be a foreign key in the student table.</p>
+               <img src="images/example15.png">
+            </ol>
+         </div>
+      </div>
+   </div>
+</section>
+
+</body>
+
+
+<!-- reviews section ends -->
+
+<!-- couter section ends -->
+
+<!-- about section starts  -->
+<br><br>
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section>
+
+      <div class="credit">&copy; copyright @ 2022 by <span>PCNL FTA-DBMS</span> | All rights reserved!</div>
+
+   </section>
+
+</footer>
+
+<!-- footer section ends -->
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

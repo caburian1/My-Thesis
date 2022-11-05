@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FTA-DBMS App</title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="index.html" class="logo" ><img src="images/back.png"  style="width:30px;height:30px;"></a>
+
+      
+   </section>
+
+</header>
+
+<!-- header section ends -->
+<br><br><br>
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+   <div class="row">
+
+      <div class="content">
+        <h3><span>Definition of Terms</span></h3>
+      </div>
+   </div>
+
+</section>
+
+
+
+<!-- home section ends -->
+<input id="searchbar" onkeyup="search_words()" type="text"
+        name="search" placeholder="Search.."> 
+ <!-- input tag -->
+
+ 
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+       <div class="tex">        
+    <!-- ordered list -->
+   
+    <ul id='list' style="list-style-type: none;"> 
+        <li class="wordss"><b>Administrator</b> - maintain the DBMS and are responsible for administrating the database.</li> 
+        <li class="wordss"><b>Aggregate function </b> - performs a calculation on a set of values, and returns a single value.</li> 
+        <li class="wordss"><b>Anomaly</b> - A person or thing that is different from what is usual, or not in agreement with something else and therefore not satisfactory</li> 
+        <li class="wordss"><b>Bidirectional</b> - A bidirectional relationships mean that the flow of data is mutual between the related forms. With same example, let's assume the relationship between the Employee Profile and Manager Details is a two way or bidirectional relationship. </li> 
+        <li class="wordss"><b>Cardinality of Projection </b> - The result of a projection contains at most as many tuples as the operand without changing values.</li> 
+        <li class="wordss"><b>Cascade delete </b> - means that if a record in the parent table is deleted, then the corresponding records in the child table will automatically be deleted. This is called a cascade delete in SQL Server.</li> 
+        <li class="wordss"><b>Character domain</b> - is used with single character or string attributes</li> 
+        <li class="wordss"><b>Comprehensive data sublanguage </b> - The relational database may support many languages.</li> 
+        <li class="wordss"><b>Complexity</b> - the state or quality of being intricate or complicated. </li> 
+        <li class="wordss"><b>Constraint</b> - Constraints are the set of rules that ensures that when an authorized user modifies the database, they do not disturb the data consistency and the constraints are specified within the DDL commands like “alter” and “create” command. </li> 
+        <li class="wordss"><b>COUNT function </b> - counts the number of cells that contain numbers, and counts numbers within the list of arguments.</li> 
+        <li class="wordss"><b>Data models </b> - define how the logical structure of a database is modeled. Data models define how data is connected to each other and how they are processed and stored inside the system.</li> 
+        <li class="wordss"><b>Database environment </b> - is a collective system of components that comprise and regulates the group of data, management, and use of data, which consist of software, hardware, people, techniques of handling database, and the data also.</li>
+        <li class="wordss"><b>Database normalization </b> - is the process of removing redundant data from your tables to improve storage efficiency, data integrity, and scalability.</li> 
+        <li class="wordss"><b>DELETE query </b> -is an action query (SQL statement) that deletes a set of records according to criteria (search conditions) you specify.</li> 
+        <li class="wordss"><b>Denormalization</b> - is a strategy used on a previously-normalized database to increase performance. In computing, denormalization is the process of trying to improve the read performance of a database, at the expense of losing some write performance, by adding redundant copies of data or by grouping data.</li> 
+        <li class="wordss"><b>Depict</b> - A person or thing can be depicted in a particular way through a description, a drawing, a photograph, or any other artistic medium. Whenever a vivid picture of something — like life in Victorian England — is presented, that thing is being depicted.</li> 
+        <li class="wordss"><b>Designers</b> - are the group of people who actually work on the designing part of the database.</li> 
+        <li class="wordss"><b>Distribution independence </b> - The end users and application programs are unaware of and unaffected by the data location (distributed vs local databases).</li> 
+        <li class="wordss"><b>Domains</b> - are data type definitions that resolve to a primitive data type or another domain.</li> 
+        <li class="wordss"><b>Dynamic online catalog based on the relational model </b> - The metadata must be stored and managed as ordinary data – that is, in tables within the database. Such data must be available to authorized users using the standard database relational language.</li> 
+        <li class="wordss"><b>End users </b> - are those who actually reap the benefits of having a DBMS.</li> 
+        <li class="wordss"><b>Entity</b> - An entity in an ER Model is a real-world entity having properties called attributes.</li> 
+        <li class="wordss"><b>Entity</b> - An entity in DBMS (Database management System) is a real-world thing or a real-world object which is distinguishable from other objects in the real world. </li> 
+        <li class="wordss"><b>Entity-Relationship (ER) Model</b> - is based on the notion of real-world entities and relationships among them.</li> 
+        <li class="wordss"><b>Equi Join </b> - combine tuples using attributes names if they equal have with different values.</li> 
+        <li class="wordss"><b>Exact numeric domains </b> - are used with exact values, integer, or numbers with a fractional part.</li> 
+        <li class="wordss"><b>File System </b> - </li> 
+        <li class="wordss"><b></b> - used mainly on IBM mainframe systems</li> 
+        <li class="wordss"><b>Foreign Key </b> - A foreign key is generally a primary key from one table that appears as a field in another where the first table has a relationship to the second.</li> 
+        <li class="wordss"><b>Guaranteed access</b> - Every value in a table is guaranteed to be accessible through a combination of table name, primary key value, and column name.</li> 
+        <li class="wordss"><b>Hardware</b> - all the system’s physical devices</li> 
+        <li class="wordss"><b>Hierarchical</b> - Arranged according to people's or things' level of importance, or relating to such a system: The military has a hierarchical rank structure. It's a very hierarchical organization in which everyone's status is clearly defined.</li> 
+        <li class="wordss"><b>High-level insert, update and delete </b> - The database must support set-level inserts, updates, and deletes.</li> 
+        <li class="wordss"><b>Inheritance</b> - Heredity, also called inheritance or biological inheritance, is the passing on of traits from parents to their offspring; either through asexual reproduction or sexual reproduction, the offspring cells or organisms acquire the genetic information of their parents.</li> 
+        <li class="wordss"><b>INSERT Query</b> - inserting one or more rows into a database table with specified table column values.</li> 
+        <li class="wordss"><b>InsertQuery property </b> - in the designer shadows the same property in the associated control, and is intended for internal use only.</li> 
+        <li class="wordss"><b>Integrity</b> - Integrity is the practice of being honest and showing a consistent and uncompromising adherence to strong moral and ethical principles and values.</li> 
+        <li class="wordss"><b>Integrity Constraints </b> - are the protocols that a table's data columns must follow. These are used to restrict the types of information that can be entered into a table. This means that the data in the database is accurate and reliable.</li> 
+        <li class="wordss"><b>Integrity independence </b> - All relational integrity constraints must be definable in the relational language stored in the system catalog, not at the application level.</li> 
+        <li class="wordss"><b>Intervals</b> - are used to represent a measure of time. </li> 
+        <li class="wordss"><b>Join</b> - operation combine them connection between the relations to use the join</li> 
+        <li class="wordss"><b>Join query </b> - is a method you can use with databases to define and illustrate relationships between two tables.</li> 
+        <li class="wordss"><b>Like Clause </b> - Like is used in condition expressions when a pattern is instead of an exact value.</li> 
+        <li class="wordss"><b>Logical data independence </b> - Applications programs and ad hoc facilities are logically unaffected when changes are made to the table structures that preserve the original table values (changing order of columns or inserting columns).</li> 
+        <li class="wordss"><b>Matrix</b> - Matrix is an arrangement of numbers into rows and columns. Make your first introduction with matrices and learn about their dimensions and elements. A matrix is a rectangular arrangement of numbers into rows and columns. For example, matrix A has two rows and three columns.</li> 
+        <li class="wordss"><b>Min, Max, and Avg functions</b> - are used to find the minimum, maximum and average of the values in an attribute.</li> 
+        <li class="wordss"><b>Nonprime </b> - Providing credit to borrowers that are more likely to default due to a poor credit history or other problems. quotations</li> 
+        <li class="wordss"><b>Nonsubversion </b> - If the system supports low-level access to the data, users must not be allowed to bypass the integrity rules of the database.</li> 
+        <li class="wordss"><b>NULL Constraint </b> - Use the NULL keyword to specify that a column can store the NULL value for its data type.</li> 
+        <li class="wordss"><b>Outer Join</b> - If no match is found for a tuple, we can join it with a null tuple. This is called outer join.</li> 
+        <li class="wordss"><b>Physical data independence </b> - Applications and ad hoc facilities are logically unaffected when physical access methods or storage structures are changed.</li> 
+        <li class="wordss"><b>Primary Key </b> - A primary key is a candidate key that is most appropriate to be the main reference key for the table.</li> 
+        <li class="wordss"><b>Primary Key Constraints </b> - table typically has a column or combination of columns that contain values that uniquely identify each row in the table.</li> 
+        <li class="wordss"><b>Projection </b> - Projection operation produces a relation with a sub-set of the attributes of its operand.</li> 
+        <li class="wordss"><b>Queries and Query Languages </b> - Query is a set of operations that take one or some relations (database) as input and return one or some relations (database) as output.</li> 
+        <li class="wordss"><b>Real Value Domains </b> - are used for non-exact numeric values.</li> 
+        <li class="wordss"><b>Relational </b> - Entity Relationship Modeling and support for relational data Modeling</li> 
+        <li class="wordss"><b>Relational Algebra</b> - A collection of operators that are defined on relations to form complex expression.</li> 
+        <li class="wordss"><b>Relational Model </b> - The most popular data model in DBMS is the Relational Model. It is more scientific model than others.</li> 
+        <li class="wordss"><b>Relationship</b> - The logical association among entities is called relationship.</li> 
+        <li class="wordss"><b>Renaming</b> - changes attribute names without changing values.</li> 
+        <li class="wordss"><b>Schema</b> - A schema, or scheme, is an abstract concept proposed by J. Piaget to refer to our, well, abstract concepts. Schemas (or schemata) are units of understanding that can be hierarchically categorized as well as webbed into complex relationships with one another.</li> 
+        <li class="wordss"><b>Selection</b> - Selection operation produces a schema as its operand.</li> 
+        <li class="wordss"><b>Semantic</b> - Semantics is the study of reference, meaning, or truth. The term can be used to refer to subfields of several distinct disciplines, including philosophy, linguistics and computer science.</li> 
+        <li class="wordss"><b>Software </b> - is a set of instructions, data or programs used to operate computers and execute specific tasks.</li> 
+        <li class="wordss"><b>SQL INTERSECT </b> - operator combines two select statements and returns only the dataset that is common in both the statements. </li> 
+        <li class="wordss"><b>Structured Query Language (SQL)-</b> - is a standardized programming language that is used to manage relational databases and perform various operations on the data in them.</li> 
+        <li class="wordss"><b>SUM function adds values </b> - You can add individual values, cell references or ranges or a mix of all three. </li> 
+        <li class="wordss"><b>Surrogate Keys </b> - A surrogate key is a unique key for an entity in the client's business or for an object in the database. Sometimes natural keys cannot be used to create a unique primary key of the table. This is when the data modeler or architect decides to use surrogate or helping keys for a table in the LDM.</li> 
+        <li class="wordss"><b>Systematic treatment </b> - Nulls must be represented and treated in a systematic way, independent of data type.</li> 
+        <li class="wordss"><b>Tables  </b> - In relational data model, relations are saved in the format of Tables. This format stores the relation among entities. A table has rows and columns, where a row represents records and columns represent the attributes.</li> 
+        <li class="wordss"><b>Transitive</b> - A transitive verb is a verb that accepts one or more objects. This contrasts with intransitive verbs, which do not have objects. Transitivity is traditionally thought of as a global property of a clause, by which activity is transferred from an agent to a patient.</li> 
+        <li class="wordss"><b>Tuple</b> - A single row of a table, which contains a single record for that relation is called a tuple.</li>
+        <li class="wordss"><b>UNIQUE constraint</b> - ensures that all values in a column are different. Both the UNIQUE and PRIMARY KEY constraints provide a guarantee for uniqueness for a column or set of columns.</li> 
+        <li class="wordss"><b>Update Query </b> - is an action query (SQL statement) that changes a set of records according to criteria (search conditions) you specify. It's a very powerful feature and a fundamental part of relational databases since you can modify a huge number of records at one time.</li> 
+        <li class="wordss"><b>View updating</b> - Any view that is theoretically updatable must be updatable through the system.</li>
+        <li class="wordss"><b></b>  </li> 
+        <li class="wordss"><b></b>  </li> 
+        <li class="wordss"><b></b>  </li> 
+        <li class="wordss"><b></b>  </li> 
+        
+   </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+
+
+
+</body>
+
+
+<!-- reviews section ends -->
+
+<!-- couter section ends -->
+
+<!-- about section starts  -->
+<br><br>
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section>
+
+      <div class="credit">&copy; copyright @ 2022 by <span>PCNL FTA-DBMS</span> | All rights reserved!</div>
+
+   </section>
+
+</footer>
+
+<!-- footer section ends -->
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

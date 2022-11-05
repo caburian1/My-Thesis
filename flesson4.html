@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FTA-DBMS App</title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="fundamentals.html" class="logo" ><img src="images/back.png"  style="width:30px;height:30px;"></a>
+
+      
+   </section>
+
+</header>
+
+<!-- header section ends -->
+<br><br><br>
+<!-- home section starts  -->
+
+<section class="home" id="home">
+   <div class="row">
+      <div class="content">
+        <h3>Lesson 4<span><br>SQL Query Language (1)</span></h3>
+      </div>
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Topics</h2>
+            <ul>
+               <li>Introduction
+                  <ul>
+                     <li>SQL History</li>
+                  </ul></li>
+               <li>Domain Definition
+                  <ul>
+                     <li>Elementary Domains</li>
+                     <li>User-defined Domains</li>
+                  </ul></li>
+               <li>Creating Tables</li>
+               <li>Constraint Definition</li>
+               <li>INSERT Query</li>
+               <li>SELECT Query</li>
+               <li>Attribute Expressions</li>
+               <li>Logical Expressions in Queries</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>SQL</h2>
+            <ul>
+               <li>SQL stands for Structured Query Language</li><br>
+               <li>First proposed by IBM Research 1974</li><br>
+               <li>First implementation SQL/DS,IBM 1981</li><br>
+               <li>Most DBMS systems support base functionality but new properties</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Domains</h2>
+            <ul>
+               <li>Domains specify the content type of attributes
+                  <ul>
+                     <li>e.g. Atribute <i>"Employee name"</i> gets its value from the domain of <i><b>strings</b> (Each name is sa string)</i></li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Elementary Domains - Character</h2>
+            <ul>
+               <li>Character domain is used with single character or string attributes</li>
+               <li>Srings may nhave variable length</li>
+               <li>Syntax
+                  <ul>
+                     <li><b><i>character or char</i></b> to define single character attributes</li>
+                     <li><b><i>character (n) or char (n)</i></b> defines a fixed length string</li>
+                     <li><b><i>character varying or varchar </i></b>defines a variable length string</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Elementary Domains - Exact Values</h2>
+            <ul>
+               <li>Exact numeric domains are used with exact values, integer, or numbers with a fracional part</li>
+               <li>Four types are:
+                  <ul>
+                     <li>numeric <i>[ ( Precision [,Scale] ) ] where precision is the total number of digits and scale is the number of digits after decimal point
+                        <ul>
+                           <li>e.g. numeric (5,2) shows number like 455.12</li>
+                        </ul></i></li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Elementary Domains - Real Values</h2>
+            <ul>
+               <li>RealValue Domains are used for non-exact numeric values</li>
+               <li>Real value domains are based on a floating point representation</li>
+               <li>Three types available
+                  <ul>
+                     <li><b><i>float  [ ( Precision ) ] </b>e.g. float(6)  (total number of digits is 6)</i></li>
+                     <li><b><i>double precision </i></b> (two times the precision of float)</li>
+                     <li><b><i>real</i></b></li>
+                  </i></ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Elementary Domains - Date, Time, and Intervals</h2>
+            <ul>
+            <li>Date and Time are used for temporal instant attributes
+               <ul>
+                  <li>e.g &nbsp; Date  &nbsp; <i>(stores day, month and year values)</i></li>
+                  <li><i>A date value is given as
+                     <ul>
+                        <li>MM/DD/YY or MM/DD/YYYY in USA</li>
+                        <li>YY.MM.DD orYYYY.MM.DD in ANSI (and more..)</li>
+                     </ul></i></li>
+                  <li><b>Time</b><i> ( stores hour, minute and second values)</i></li>
+                  <li><i>Time value is given as hh:mm:ss</i></li>
+               </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Intervals</h2>
+           <ul>
+            <li>Temporal Interval domains are defined by</li><br>
+            <li><i><b>Interval</b> First <b>To</b> last</i>
+               <ul style="list-style-type: none;"><i>
+                  <li>e.g. Interval 1990 To 1999 &nbsp; (year)</li>
+                  <li>Interval 1985.1 To 2009.10 (year and month)</li>
+                  <li>Interval 11:20:10 To 12:25:40 (hour, minute and second)</li>
+               </i></ul></li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>User-defined Domains</h2>
+            <ul>
+               <li>A user-defined domain is given by
+                  <ul>
+                     <li>name</li>
+                     <li>elementary domain</li>
+                     <li>default value</li>
+                  </ul></li>
+               <li>Syntax
+                  <ul>
+                     <li><b>create domain</b> DomainName <b>as</b> elementaryDomain
+                        <ul>
+                           <li style="list-style-type:none;"><i><b>[ default</b> Default Value ]</i></li>
+                        </ul></li>
+                     <li>e.g. create domian StudentName as char(30)</li>
+                     <li>e.g. create domain money as numeric(19,2) default 0</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Table Definition</h2>
+            <ul>
+               <li>An SQL table consists of
+                  <ul>
+                     <li>an ordered set of attributes</li>
+                     <li>an optional set of constraints</li>
+                  </ul></li>
+               <li><b><i>create table </i></b> statement
+                  <ul>
+                     <li>defines a relation schema</li>
+                     <li>creates an empty table</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Create Table</h2>
+            <ul>
+               <li>Syntax:
+                  <ul style="list-style-type:none;">
+                     <li>create table <i>TableName
+                        <br> &nbsp; (
+                        <ul style="list-style-type:none;"   >
+                           <li>AttributeName<sub>1</sub> Domain [ DefaultValue] [ Constraints ]</li>
+                           <li>AttributeName<sub>2</sub> Domain [ DefaultValue ] [ Constraints ]</li>
+                           <li>...</li>
+                           <li>AttributeName<sub>n</sub> Domain [ DefaultValue ] [ Constraints ]</li>
+                           <li>Other Constraints ]</li>
+                        </ul></li>
+                        <li>)</li></i>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Example</h2>
+            <ul style="list-style-type:none">
+               <li>create table Employee
+                  <ul style="list-style-type:none">
+                     <li>(
+                        <ul style="list-style-type:none">
+                           <li>RegNo character(6) primary key,</li>
+                           <li>FirstName character(20) not null,</li>
+                           <li>Surname character(20) not null,</li>
+                           <li>Dept character (15)</li>
+                        </ul></li>
+                     <li>)</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Primary Key Constraint</h2>
+            <ul>
+               <li>Primary key constraint is defined by <i><b>primary key</b></i> keyword as
+                  <ul>
+                     <li>After defining the attribute in the table(as a constraint)</li>
+                     <li>At the end of create table statement. This method is used when primary key has more than one attribute in it.</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Primary Key Constraint</h2>
+            <ul>
+               <li>Primary key constraint is defined by <i><b>primary key</b></i> keyword as
+                  <ul>
+                     <li>After defining the attribute in the table(as a constraint)</li>
+                     <li>At the end of create table statement. This method is used when primary key has more than one attribute in it.</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Primary Key Constraint</h2>
+            <ul>
+               <li>Primary key constraint is defined by <i><b>primary key</b></i> keyword as
+                  <ul>
+                     <li>After defining the attribute in the table(as a constraint)</li>
+                     <li>At the end of create table statement. This method is used when primary key has more than one attribute in it.</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Example 1</h2>
+           <ul style="list-style-type:none">
+              <li>CREATE TABLE Persons
+               <br>(
+               <ul style="list-style-type:none">
+                  <li>P_Id integer PRIMARY KEY,</li>
+                  <li>LastName varchar NOT NULL,</li>
+                  <li>FirstName varchar,</li>
+                  <li>Address varchar,</li>
+                  <li>City varchar</li>
+               </ul>
+               )</li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Example 2</h2>
+           <ul style="list-style-type:none">
+              <li>CREATE TABLE Persons
+               <br>(
+               <ul style="list-style-type:none">
+                  <li>P_Id integer NOT NULL,</li>
+                  <li>LastName varchar(255) NOT NULL,</li>
+                  <li>FirstName varchar(255),</li>
+                  <li>Address varchar(255),</li>
+                  <li>City varchar(255),</li>
+                  <li>PRIMARY KEY (P_Id,LastName)</li>
+               </ul>
+               )</li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Uniqueness Constraint</h2>
+           <ul>
+              <li>We may define an attribute or a group of attributes as unique. This constraint will not allow repeated values for that attribue(s)</li>
+              <br>
+              <li>Syntax
+               <ul>
+                  <li>Use <b><i>unique</i></b> after defining the attribute</li>
+                  <li>Use <i><b>unique</b>( attribut_name ) at the end of table definition.</i></li>
+               </ul></li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Example</h2>
+           <ul style="list-style-type:none">
+              <li>CREATE TABLE Employee
+               <br>(
+               <ul style="list-style-type:none">
+                  <li>RegNo character(6) primary key, </li>
+                  <li>FirstName character(20) not null,</li>
+                  <li>Surname character(20) not null, </li>
+                  <li>Dept character (15)</li>
+                  <li>Salary numeric(9) default  0, </li>
+                  <li>City character(15), </li>
+                  <li>unique(Surname, FirstName)</li>
+               </ul>
+               )</li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Foreign Key Constraint</h2>
+           <ul>
+              <li>Foreign keys are defiined using <b><i>references</i></b> keyword</li>
+              <br>
+              <li>Syntax <b><i>references</i></b> External_Table(Attribute)</li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Example</h2>
+            <ul style="list-style-type:none">
+              <li>CREATE TABLE Employee
+               <br>(
+               <ul style="list-style-type:none">
+                  <li>RegNo character(6) primary key, </li>
+                  <li>FirstName character(20) not null,</li>
+                  <li>Surname character(20) not null, </li>
+                  <li>Dept character (15)
+                     <ul style="list-style-type:none">
+                        <li>references Department(DeptName),</li>
+                     </ul></li>
+                  <li>Salary numeric(9) default  0, </li>
+                  <li>City character(15), </li>
+                  <li>unique(Surname, FirstName)</li>
+               </ul>
+               )</li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>NULL Constraint</h2>
+            <ul>
+               <li>An attribute can be defined to always have a value <b><i>not null</i></b> constraint</li>
+               <br>
+               <li>e.g.
+                  <ul style="list-style-type:none">
+                     <li>FirstName character(20) not null,</li>
+                     <li>Surname character(20) not null unique,</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>INSERT Query</h2>
+            <ul>
+               <li>INSERT isnused to add a record (tuple) to the table.</li>
+               <li>Syntax
+                  <ul>
+                     <li><b><i>Insert Into</i></b> table_name [(Attributes)] <br> values (list of values)</li><br>
+                     <li style="list-style-type:none">e.g.
+                        <ul style="list-style-type:none">
+                           <li>insert into Department(DeptName, City)
+                              <ul style="list-style-type:none">
+                                 <li>values(‘Production’,’Ankara’)</li>
+                              </ul></li>
+                        </ul></li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Example</h2>
+            <img src="images/example51.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>INSERT Query Propeeties</h2>
+           <ul>
+              <li>The ordering of the attributes (if present) and of values is important (first value with the first attribute, and so on)</li>
+              <li>If <i>AttributeList is omitted, all the relation attributes are</i> considered, in the order in which they appear in the table definition</li>
+              <li>If <i>AttributeList does not contain all the relation attributes, to </i> the remaining attributes it is assigned the default value (if defined) or the null value</li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>SELECT Query</h2>
+           <ul>
+              <li>Select is used for retrieving records from tables</li>
+              <li>The simplest form of Select query is:
+               <ul style="list-style-type:none">
+                  <li>SELECT attribute_list</li>
+                  <li>FROM Table_name</li>
+                  <li>WHERE Condition</li>
+                  <br>
+                  <li>Condition eliminates some of the records from the list.</li>
+               </ul></li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Example</h2>
+           <img src="images/example52.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Selecting All Attributes</h2>
+           <ul>
+              <li>To select all attributes we can use * in place of the attribute list
+               <br>SELECT *
+               <br>FROM table_name
+               <br>WHERE condition
+               <br>
+               <br>SELECT * is the same as select operation defined in relational algebra</li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Example</h2>
+           <img src="images/example53.png">
+           <br>
+           <img src="images/example54.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Attribute Expressions</h2>
+           <ul>
+              <li>Attributes can be written as expressions. In this case a name can be asigned to the resulted table attribute using <i><b>as</b> new_name.</i></li>
+              <img src="images/example55.png">
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Logical Expressions in SELECT Query</h2>
+           <ul>
+              <li>The condition part of a select query can be written using logical expressions with AND, OR and NOT</li>
+              <img src="images/example56.png">
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Example</h2>
+              <img src="images/example57.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Example</h2>
+              <ul>
+                 <li>Find the names and surnames of all employees working in Administration department in London and earning more than <b>45</b>, or working in Production department in Oxford and earning less than 30.</b></li>
+              </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Solution</h2>
+              <ul style="list-style-type:none">
+                 <li>SELECT Name, Surname</li>
+                 <li>FROM Employee</li>
+                 <li>WHERE (Dept='Administration' AND City = "London' AND Salary > <b>45</b> )
+                  <ul style="list-style-type:none">
+                     <li>OR</li>
+                  </ul></li>
+                  <li>(Dept='Production' AND City='Oxford'</li>
+                  <li>AND Salary < 30 )</li>
+              </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Summary</h2>
+             <li>SQL query language isn designed to write queries in relational databases</li>
+             <li>Each attribute is defined by using a domain</li>
+             <li>CREATETABLE is used to create a new table</li>
+             <li>INSERT is used to add records to a table</li>
+             <li>SELCT is used to retrieve data from a table</li>
+      </div>
+   </div>
+</section>
+
+</body>
+
+
+<!-- reviews section ends -->
+
+<!-- couter section ends -->
+
+<!-- about section starts  -->
+<br><br>
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section>
+
+      <div class="credit">&copy; copyright @ 2022 by <span>PCNL FTA-DBMS</span> | All rights reserved!</div>
+
+   </section>
+
+</footer>
+
+<!-- footer section ends -->
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

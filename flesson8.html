@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FTA-DBMS App</title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="fundamentals.html" class="logo" ><img src="images/back.png"  style="width:30px;height:30px;"></a>
+
+      
+   </section>
+
+</header>
+
+<!-- header section ends -->
+<br><br><br>
+<!-- home section starts  -->
+
+<section class="home" id="home">
+   <div class="row">
+      <div class="content">
+        <h3>Lesson 8<span><br>Database Design (2)</span></h3>
+      </div>
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Topics</h2>
+            <ul>
+               <li>Database Design
+                  <ul>
+                     <li>Logical Design(Review)</li>
+                     <li>Physical Design</li>
+                  </ul></li>
+               <li>Entity Relationship (ER) Model to Relational Model
+                  <ul>
+                     <li>Entity</li>
+                     <li>Relationship</li>
+                     <li>Attributes</li>
+                  </ul></li>
+               <li>Normalization
+                  <ul>
+                     <li>First normal form</li>
+                     <li>Second normal form</li>
+                     <li>Boyce-Codd normal form</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Database Design</h2>
+            <ul>
+               <li>Database design is the process of producing a detailed data model of a database.</li>
+               <li>Database design includes:
+                  <ul>
+                     <li>Determining data to be stored</li>
+                     <li>Determining main entities and their attributes</li>
+                     <li>Determining relationships between entities</li>
+                     <li>Designing a suitable model to store them</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Logical and Physical Design</h2>
+            <ul>
+               <li>Logical design is about gather requirements and converting those requirements into a model.</li>
+               <li>Physical design is the process of converting the logical model into database tables.</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Converting E-R Model into Relational Model</h2>
+            <ul>
+               <li>Each entity in an E-R model is coverted to a table in relational model.</li>
+               <li>The attributes of the enity become fields of the table</li>
+               <li>Primary key is given by the identifiers of the entity</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Sample E-R Model</h2>
+            <img src="images/example113.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Example</h2>
+            <ul style="list-style-type: none;">
+               <li>CREATETABLE Employee
+                  <ul style="list-style-type: none;">
+                     <li>(
+                        <ul style="list-style-type: none;">
+                           <li>Code Integer PRIMARY KEY,</li>
+                           <li>Surname Char(30),</li>
+                           <li>Salary Integer,</li>
+                           <li>Age Integer</li>
+                        </ul></li>
+                     <li>)</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>One-to-One Relationships</h2>
+            <ul>
+               <li>One-to-one relationships are defined as attributes.
+                  <ul>
+                     <li>e.g. Book &#8954; ISBN : Each book has only one ISBN and each ISBn represents only one book. ISBN should be an attribute for book.</li>
+                  </ul></li>
+               <li>For restricting access to sensitive data, some attributes can be stored in a second table.
+                  <ul>
+                     <li>User and Password have a one-to-one relationship. Password should be an attribute for the user but we generally create a new table as <UsrID,Pasword></li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>One-to-Many Relationships (1)</h2>
+            <ul>
+               <li>One-to-many relationships are defined as foreign keys.
+                  <ul>
+                     <li>e.g. An employee is a member of one department
+                        <br> &nbsp; &nbsp; &nbsp; A department has many members
+                        <br>In employee table define attribute <i>dept</i> to show the department of each employee. <i>dept</i> is a foreign key referring to Department.</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>One-to-Many Relationships (2)</h2>
+            <ul>
+               <li>If relation has attributes then we have to define it as a table.
+                  <ul>
+                     <li>e.g. The relationship <b><i>Membership</i></b> between <b><i>Employee</i></b> and <b><i>Department</i></b> has <i>"start date"</i> attribute.</li>
+                     <li>the relationship which is defined as a table can store the history of a relationship.</li>
+                     <li>The primary keys of both entities and the attributes of the relationship are added to the table</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Example</h2>
+            <ul style="list-style-type: none;">
+               <li>CreateTable Membership
+                  <br>( EmpCode Number references Employee(code),
+                  <br> &nbsp; DeptName &nbsp char(20) references
+                  <br> &nbsp; department(name),
+                  <br> &nbsp; startDate date,
+                  <br> &nbsp; position char(30)
+                  <br> &nbsp; PRIMARY KEY ( EmpCode, DeptName, startDate )
+                  <br>)</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Many-to-Many Relationships</h2>
+            <ul>
+               <li>All many tp many relationships are defined as tables.
+                  <ul>
+                     <li>e.g. Student &#8594; Course</li>
+                     <li>A student takes many courses and a course is taken by many students</li>
+                     <li>The primary key of both entities are added to the table</li>
+                     <li><StudentID, CourseCode, Year-Semester, Grade></li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Recursive Relationships</h2>
+            <ul>Recursive relationships are defined as a foreign key attribute.
+               <ul>
+                  <li>e.g.
+                     <br>Human < IDm Name, Surname, Birth Date, Gender, Father >
+                     <br>Father is a foreign key to tabke Human (recursive)</li>
+               </ul></ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Ternary Relationships</h2>
+            <ul>
+               <li>Ternary relationships are defined as a table.</li>
+               <br>
+               <li>the primary key of three tables are included in the table</li>
+               <br>
+               <li>e.g. A client borrows a book from a library entities are: Client, Book, Library
+                  <br><b>Borrow < BookID, ClientID, LibID, Date,...></b></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Composite Attibutes</h2>
+            <ul>
+               <li>Composite attributes are defined as a table</li>
+               <li>the primary key of the composite attribute table is added to the table using itn= as foreign key.
+                  <ul>
+                     <li>e.g. Address<Street, HouseNumber, PostCode>
+                        <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PostCode is primary key</li>
+                  </ul>
+                  <ul>
+                     <li>e.g.Person <Surname, Age, Sex, PostCode>
+                        <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PostCode is foreign key</li>
+                        <img src="images/example114.png">
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Normalization</h2>
+            <ul>
+               <li>Normalization is a method for designing databases.</li>
+               <li>Normalization starts with a pile of data items then puts the, in a single table. Next it breaks the table into more tables.</li>
+               <li>Normalization is performed in several stages (normal forms)</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>First Normal Form</h2>
+            <ul>
+               <li>After gathering data, they are stored in a table. The table is said to be in first normal form if it is flat.</li>
+               <br><li>e.g. A customer in banking system performs many transactions in a given date.</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Converting to First Normal Form</h2>
+            <img src="images/example115.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Summary</h2>
+            <ul>
+               <li>Database design is the process of modeling data in an information system.</li>
+               <li>E-R model is converted into relational tables in physical design.</li>
+               <li>Entities and many-to-many relationships, and one-to-many relationships with attribute in E-R model are converted to tables.</li>
+               <li>Normalization is used a database design method in logical and physical design.</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+
+</body>
+
+
+<!-- reviews section ends -->
+
+<!-- couter section ends -->
+
+<!-- about section starts  -->
+<br><br>
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section>
+
+      <div class="credit">&copy; copyright @ 2022 by <span>PCNL FTA-DBMS</span> | All rights reserved!</div>
+
+   </section>
+
+</footer>
+
+<!-- footer section ends -->
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

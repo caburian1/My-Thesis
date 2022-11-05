@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FTA-DBMS App</title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="fundamentals.html" class="logo" ><img src="images/back.png"  style="width:30px;height:30px;"></a>
+
+      
+   </section>
+
+</header>
+
+<!-- header section ends -->
+<br><br><br>
+<!-- home section starts  -->
+
+<section class="home" id="home">
+   <div class="row">
+      <div class="content">
+        <h3>Lesson 2<span><br>The Relational Model</span></h3>
+      </div>
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Topics</h2>
+               <ul>
+                 <li>Definitions</li>
+                  <ul>
+                     <li>Relations</li>   
+                     <li>Relation Schema and Table</li>
+                     <li>Database Schema</li>
+                  </ul>
+                 <li>Nested Structures</li>
+                 <li>Incomplete Data</li> 
+                 <li>Key Constraint</li>
+               </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Relational Model</h2>
+               <ul>
+                 <li>Introduced by E. F. Codd in 1970</li>
+                 <li>It is based on the mathematical notion of <b><i>Relation</b></i></li>
+                  <li>Is the most widely used model</li>
+                  <li>Many vendors such as IBM, Informix, Oracle, Sybase, etc.</li>
+               </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Relational Model Definitions</h2>
+               <ul>
+                 <li><b><i>n-tuple</i></b>: an <b><i>n-tuple</i></b> is an ordered list of <i>n</i> elements
+                  <ul>
+                     <li>e.g. <'A',11,"Store",100> is a 4-tuple</li>
+                  </ul></li>
+                  <li><b><i>Cortesian Product of n Sets D<sub>1 </sub>X D<sub>2 </sub>X…X D<sub>n</sub></i></b>
+                  <ul>
+                     <li>is a set of n-tupes where elements of tuples are taken from the sets D<sub>1</sub>,...,D<sub>n</sub></li>
+                  </ul></li>
+               </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Cartesian Product Example</h2>
+               <ul>
+                 <li>Set-A: {1,2,3,4,5,6}</li>
+                 <li>Set-B: {'A','B','C','D'}</li>
+                 <li>Cartesian Product of Set-A and Set-B is
+                  <ul>
+                     <li>Set-A x Set-B</li>
+                     <li style="list-style-type: none;">= {1,'A'),(1.'B'),(1,'C'),...,</li>
+                     <li style="list-style-type: none;">,.......,</li>
+                     <li style="list-style-type: none;">(5,’A’),(5,’B’),(5,’C’),(5,’D’),</li>
+                     <li style="list-style-type: none;">(6,’A’),(6,’B’),(6,’C’),(6,’D’)}</li>
+                  </ul></li>
+               </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Relation</h2>
+               <ul>
+                 <li>A relation is a subset of the Cartesian product of D<sub>1</sub> X D<sub>2</sub> X...X D<sub>n</sub></li>
+                 <li>Sets D<sub>1</sub>D<sub>2</sub>,...,D<sub>n</sub> called <b><i>domains</i></b></li>
+                 <li><b><i>n</i></b> is the <b><i>degree</i></b> of the relation</li>
+                 <li>The number of tuples is called the <b><i>cardinality</i></b> of the relation</li>
+               </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Example Relation</h2>
+               <ul>
+                 <li>Domains:
+                  <ul>
+                     <li>Set-A: {1,2,3,4,5,6}</li>
+                     <li>Set-B: {‘A’,’B’,’C’,’D’}</li>
+                  </ul></li>
+                 <li>Relation:
+                  <ul>
+                     <li>R = { (1,’A’),(2,’B’),(3,’A’),(4,’C’),(5,’D’),(6,’A’),(6,’B’)x</li>
+                  </ul></li>
+                  <li style="list-style-type: none;">which is a subset of <i>Set-a x Set-B</i></li>
+               </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Attribute, Schema, and Table</h2>
+               <ul>
+                 <li>We associate a unique name (<b>Attribute</b>)with each domain</li>
+                 <li><b>Relation Schema</b> is the name of the relation (R) with a list of attributes names A<sub>1</sub>,...,A<sub>n</sub></li>
+                 <li><b>Table</b> is a set of n-tuples, which a schema so:
+                  <ul>
+                     <li>there is no ordering betweebn n-tuples</li>
+                     <li>the n-tuples are distinct from one another no repetition</li>
+                  </ul></li>
+               </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Example</h2>
+               <ul>
+                <li>Domains:
+                  <ul>
+                     <li>D<sub>1</sub>: {1,2,...,120}</li>
+                     <li>D<sub>1</sub>: {‘Ali’, ’Mehmet’, ‘Hasan’}</li>
+                  </ul></li>
+                <li>Attributes:
+                  <ul>
+                     <li>Age (associated with D<sub>1</sub>)</li>
+                     <li>Name (associated with D<sub>2</sub>)</li>
+                  </ul></li>
+                <li>Schema:
+                  <ul>
+                     <li>StudentAge (Name,Age)</li>
+                  </ul></li>
+                <li>Table
+                  <ul>
+                     <li style="list-style-type: none;"><center><i>Student Age</i>
+                        <table style="width:50%">
+                           <tr>
+                              <td>Name</td>
+                              <td>Age</td>
+                           </tr>
+                           <tr>
+                              <td>Ali</td>
+                              <td>19</td>
+                           </tr>
+                           <tr>
+                              <td>Mehmet</td>
+                              <td>22</td>
+                           </tr>
+                           <tr>
+                              <td>Hasan</td>
+                              <td>20</td>
+                           </tr>
+                        </table>
+                     </center></li>
+                  </ul></li>
+               </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Database Schema</h2>
+               <ul>
+                 <li>Database schema is a set of relation schemas with different names.
+                  <ul>
+                     <br>
+                     <li style="list-style-type: none;">e.g. University Database Schema</li>
+                     <li style="list-style-type: none;">{</li>
+                     <li style="list-style-type: none;">Student Id, name, major, address),</li>
+                     <li style="list-style-type: none;">Course (Code, name, credits),</li>
+                     <li style="list-style-type: none;">TakesCourse (StudentID,CourseCode,Year)</li>
+                     <li style="list-style-type: none;">}      </li>
+                  </ul></li>
+               </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Example</h2>
+               <ul>
+                 <li>Library Database Schema
+                  <ul>
+                     <li style="list-style-type: none;">{
+                        <ul>
+                           <li style="list-style-type: none;">Book(BookCode, Ttile, Author, Publisher, ISBN), </li>
+                            <li style="list-style-type: none;">User(userID, Namem, Phone, Address),</li>
+                            <li style="list-style-type: none;">Borrowed(BookCode, UserID, Date, Due_Date)</li>
+                        </ul></li>
+                     <li style="list-style-type: none;">}</li>
+                  </ul></li>
+               </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Nested Structures</h2>
+               <ul>
+                 <li>If data is about different things, we have to put it in different structures.</li>
+                 <li>These structures are nested when they are related</li>
+                 <li>Problem
+                  <ul>
+                     <li>Nested structures can not be defines by a single relation without redundancy</li>
+                  </ul></li>
+                  <li>Solution
+                     <ul>
+                        <li>Use several relations</li>
+                     </ul></li>
+               </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Example: Nested Structures</h2>
+               <img src="images/example5.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Representing Nested Structures by a Single Relation (Data Redundancy)</h2>
+               <img src="images/example6.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Removing Redundancy by Using Multiple Relations</h2>
+               <img src="images/example7.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Incomplete Data</h2>
+              <ul>
+                 <li>The relational model impose a rigid structure to data:
+                  <ul>
+                     <li>information is represented by means of tuples</li>
+                     <li>tuples have to conform to relation schemas</li>
+                  </ul></li>
+                  <li>In practice data may have some differences with the schema</li>
+              </ul>     
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Incomplete Data Solution</h2>
+              <ul>
+                 <li>In case of Student relation
+                     <ul>
+                        <li>Student(Student ID, Name, Major, Phone, Address)
+                        <br>some student may have no telephone number.
+                        <br>We have to leave the phone attribute in that tuple empty.</li>
+                     </ul></li>
+                 <li>An attribute left empty is said to have <b><i>Null</i></b> value.</li>
+                 <li>Null value is a special value (not a value of the domain)
+                     <ul>
+                        <li style="list-style-type: none;">(e.g. Do not use “zero” as Null value for GPA attribute)</li>
+                     </ul></li>
+              </ul>     
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Types of Null Value</h2>
+              <ul>
+                 <li>Null value is used in three cases</li>
+                 <li><b><i>Unknown Value:</i></b>  there is a domain value, but it is not known (student has a birth-place but we do not know it)</li>
+                 <li><b><i>Not-existent Value:</i></b>  : the attribute is not applicable for the tuple ( e.g. in library database, periodicals do not have ISBN)</li>
+                 <li><b><i>Not-information Value:</i></b>  : the attribute is not applicable for the tuple we don‘t know whether a value exists or not (phone number of a student)</li>
+                 <li>DBMSs do not distinguish between the types.</li>
+              </ul>     
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Meaningless Database Examples</h2>
+              <ul>
+                 <li>Sometimes data in a tuple can e invalid<br>
+                 <img src="images/example8.png">
+                 <ul>
+                    <li>e.g. same RegNum for two students, invalid grade (K), invalid course code (B04), honors for a B grade,...</li>
+                 </ul></li> 
+                 <li><b><i>Constraints</i></b> are used to avoid invalid data</li>
+              </ul>     
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Unique Identification of Tuples</h2>
+              <ul>
+                <li>in each relation we should be able to uniquely identify tuples.
+                  <img src="images/example9.png"></li>
+                  <li>The registration number identifies students:
+                     <ul>
+                        <li class="changesize">there is no pair of tuples with the same value for RegNum</li>
+                     </ul></li>
+              </ul>     
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Key of a Relation (Key Constraint)</h2>
+              <ul>
+                 <li><b><i>Key</i></b> is a set of attributes that uniquely tuples in a relation
+                  <ul>
+                     <li style="list-style-type: none;"><br> e.g. <b><i>Student ID</i></b> is the key for Student relation <br>
+                     (No two students have the same ID)</li><br>
+                     <li style="list-style-type: none;"> e.g. <b><i>ISBN</i></b> is the key for Book relation <br>
+                     (No two books have the same ISBN)</li>
+                  </ul></li> 
+              </ul>     
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Primary Key</h2>
+              <ul>
+                 <li>Keys are used for uniquely identifying tuples.</li>
+                 <li>Therefore non-null key attributes are important.</li>
+                 <li>A relation may have several keys.</li>
+                 <li>The key attribute which is not null is selected as the <b><i>primary</i></b> key
+                  <ul>  
+                     <li style="list-style-type: none;"> e.g. Student Table has the keys: <br>
+                     Student ID (can be primary key)<br>
+                     Name, BirthDate (BirthDate can be null</li>
+                  </ul></li>
+              </ul>     
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Referential Key (Foreign Key)</h2>
+              <ul>
+                 <li>If a relation includes an attribute which is primary key in another relation, the attribute is called <b><i>foreign key.</i></b></li>
+                 <li>Foreign keys are used for connectong relations to each other.
+                  <ul>
+                     <li style="list-style-type: none;">e.g
+                        <ul>
+                           <li style="list-style-type: none;">Instructor (ID, Name, BirthDate, Phone, Office, DeptCode) 
+                           Department( DeptCode, Name, Building, Phone)<br><br>
+                           DeptCode in Instructor relation is a foreign key</li>
+                        </ul></li>
+                  </ul></li>
+              </ul>     
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Example</h2>
+              <img src="images/example10.png">   
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Summary</h2>
+              <ul>
+                 <li>A database is a set of relations</li>
+                 <li>Each relation is a set of n-tuples</li>
+                 <li>Each relation has a schema which defines its structure</li>
+                 <li>An element of an n-tuple can have null value</li>
+                 <li>Primary key is used to identify tuples in a relation</li>
+                 <li>Foreign keys are used to connect relations</li>
+              </ul> 
+         </div>
+      </div>
+   </div>
+</section>
+
+
+</body>
+
+
+<!-- reviews section ends -->
+
+<!-- couter section ends -->
+
+<!-- about section starts  -->
+<br><br>
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section>
+
+      <div class="credit">&copy; copyright @ 2022 by <span>PCNL FTA-DBMS</span> | All rights reserved!</div>
+
+   </section>
+
+</footer>
+
+<!-- footer section ends -->
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

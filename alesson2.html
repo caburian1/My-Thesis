@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FTA-DBMS App</title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="advanced.html" class="logo" ><img src="images/back.png"  style="width:30px;height:30px;"></a>
+
+      
+   </section>
+
+</header>
+
+<!-- header section ends -->
+<br><br><br>
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+   <div class="row">
+
+      <div class="content">
+        <h3>Lesson 2<span><br>Data Models</span></h3>
+      </div>
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Data Models</h2>
+            <ul>
+               <li>Data models
+                  <ul>
+                     <li>Relatively simple representations of complex real-world data structures
+                        <ul>
+                           <li>Often graphical</li>
+                        </ul></li>
+                  </ul></li>
+               <li>Model: an abstraction of a real-world object or event
+                  <ul>
+                     <li>Useful in understanding complexities of the real-world environment</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Data Model Basic Building Blocks</h2>
+            <ul>
+               <li>Entity: anything about which data are to be collected and stored</li>
+               <li>Attribute: a characteristic of an entity</li>
+               <li>Relationship: describes an association among entities
+                  <ul>
+                     <li>One-to-many (1:M) relationship </li>
+                     <li>Many-to-many (M:N or M:M) relationship</li>
+                     <li>One-to-one (1:1) relationship</li>
+                  </ul></li>
+               <li>Constraint: a restriction placed on the data</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Two Evolution of Data Models</h2>
+            <img src="images/example135.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Hierarchical and Network Models</h2>
+            <ul>
+               <li>The hierarchical model 
+                  <ul>
+                     <li>Developed in the 1960s to manage large amounts of data for manufacturing projects</li>
+                     <li>Basic logical structure is represented by an upside-down “tree”</li>
+                     <li>Structure contains levels or segments</li>
+                     <li>Information is represented using parent/child relationships
+                        <ul>
+                           <li>Each parent can have many children, but each child has only one parent (also known as a 1-to-many relationship). </li>
+                        </ul></li>
+                  </ul></li>
+                  <img src="images/example136.png">
+                  <li>Network model 
+                     <ul>
+                        <li>Created to represent complex data relationships more effectively than the hierarchical model</li>
+                        <li>Improves database performance</li>
+                        <li>Imposes a database standard</li>
+                        <li>Resembles hierarchical model
+                           <ul>
+                              <li>Record may have more than one parent</li>
+                           </ul></li>
+                     </ul></li>
+                     <img src="images/example137.png">
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>The Relational Model</h2>
+            <ul>
+               <li>Developed by E.F. Codd (IBM) in 1970</li>
+               <li>Table (relations) 
+                  <ul>
+                     <li>Matrix consisting of row/column intersections</li>
+                     <li>Each row in a relation is called a tuple</li>
+                  </ul></li>
+               <li>Relational models were considered impractical in 1970</li>
+               <li>Model was conceptually simple at expense of computer overhead</li>
+               <img src="images/example138.png">
+               <img src="images/example139.png">
+               <li>SQL-based relational database application involves three parts:
+                  <ul>
+                     <li>End-user interface
+                        <ul>
+                           <li>Allows end user to interact with the data</li>
+                        </ul></li>
+                     <li>Set of tables stored in the database
+                        <ul>
+                           <li>Each table is independent from another</li>
+                           <li>Rows in different tables are related based on common values in common attributes</li>
+                        </ul></li>
+                     <li>SQL “engine”
+                        <ul>
+                           <li>Executes all queries</li>
+                        </ul></li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>The Entity Relationship Model</h2>
+            <ul>
+               <li>Widely accepted standard for data modeling </li>
+               <li>Introduced by Chen in 1976</li>
+               <li>Graphical representation of entities and their relationships in a database structure</li>
+               <li>Entity relationship diagram (ERD)
+                  <ul>
+                     <li>Uses graphic representations to model database components</li>
+                     <li>Entity is mapped to a relational table</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <img src="images/example140.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>The Object-Oriented (OO) Model</h2>
+            <ul>
+               <li>Data and relationships are contained in a single structure known as an object</li>
+               <li>OODM (object-oriented data model) is the basis for OODBMS
+                  <ul>
+                     <li>Semantic data model</li>
+                  </ul></li>
+               <li>An object:
+                  <ul>
+                     <li>Contains operations </li>
+                     <li>Are self-contained: a basic building-block for autonomous structures</li>
+                     <li>Is an abstraction of a real-world entity</li>
+                  </ul></li>
+               <li>Attributes describe the properties of an object</li>
+               <li>Objects that share similar characteristics are grouped in classes</li>
+               <li>Classes are organized in a class hierarchy</li>
+               <li>Inheritance: object inherits methods and attributes of parent class</li>
+               <li>UML based on OO concepts that describe diagrams and symbols
+                  <ul>
+                     <li>Used to graphically model a system</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <img src="images/example141.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Object/Relational and XML</h2>
+            <ul>
+               <li>The Internet revolution created the potential to exchange critical business information</li>
+               <li>In this environment, Extensible Markup Language (XML) emerged as the de facto standard </li>
+               <li>Current databases support XML
+                  <ul>
+                     <li>XML: the standard protocol for data exchange among systems and Internet services</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Emerging Data Models: Big Data and NoSQL</h2>
+            <ul>
+               <li>NoSQL databases
+                  <ul>
+                     <li>Not based on the relational model, hence the name NoSQL</li>
+                     <li>Supports distributed database architectures</li>
+                     <li>Provides high scalability, high availability, and fault tolerance</li>
+                     <li>Supports very large amounts of sparse data</li>
+                     <li>Geared toward performance rather than transaction consistency</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <img src="images/example142.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <img src="images/example143.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>The Conceptual Model</h2>
+            <ul>
+               <li>Represents global view of the entire database</li>
+               <li>All external views integrated into single global view: conceptual schema</li>
+               <li>ER model most widely used</li>
+               <li>ERD graphically represents the conceptual schema</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>The Internal Model</h2>
+            <ul>
+               <li>Representation of the database as “seen” by the DBMS
+                  <ul>
+                     <li>Maps the conceptual model to the DBMS</li>
+                  </ul></li>
+               <li>Internal schema depicts a specific representation of an internal model</li>
+               <li>Depends on specific database software
+                  <ul>
+                     <li>Change in DBMS software requires internal model be changed</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <img src="images/example144.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>The Physical Model</h2>
+            <ul>
+               <li>Operates at lowest level of abstraction
+                  <ul>
+                     <li>Describes the way data are saved on storage media such as disks or tapes</li>
+                  </ul></li>
+               <li>Requires the definition of physical storage and data access methods</li>
+               <li>Relational model aimed at logical level
+                  <ul>
+                     <li>Relational model aimed at logical level</li>
+                  </ul></li>
+               <li>Physical independence: changes in physical model do not affect internal model</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <img src="images/example145.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+
+</body>
+
+
+<!-- reviews section ends -->
+
+<!-- couter section ends -->
+
+<!-- about section starts  -->
+<br><br>
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section>
+
+      <div class="credit">&copy; copyright @ 2022 by <span>PCNL FTA-DBMS</span> | All rights reserved!</div>
+
+   </section>
+
+</footer>
+
+<!-- footer section ends -->
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

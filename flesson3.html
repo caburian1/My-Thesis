@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FTA-DBMS App</title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="fundamentals.html" class="logo" ><img src="images/back.png"  style="width:30px;height:30px;"></a>
+
+      
+   </section>
+
+</header>
+
+<!-- header section ends -->
+<br><br><br>
+<!-- home section starts  -->
+
+<section class="home" id="home">
+   <div class="row">
+      <div class="content">
+        <h3>Lesson 3<span><br>Entity Relationship Diagram</span></h3>
+      </div>
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Entity Relationship Diagram</h2>
+            <ul>
+               <li>ER model allows us to sketch database designs</li>
+               <li>ERD is a graphical tool for modeling data.</li>
+               <li>ERD is widely used in database design </li>
+               <li>ERD is a graphical representation of the logical structure of a database</li>
+               <li>ERD is a model that identifies the concepts or entities that exist in a system and the relationships between those entities</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Purposes of ERD</h2>
+            <p>An ERD serves several purposes</p>
+            <ul>
+              <li>The database analyst/designer gains a <font color="50c878">better understanding of the information to be contained in the database</font> through the process of constructing the ERD. </li>
+              <li>The ERD serves as a <font color="50c878">documentation tool</font>.</li>
+              <li>Finally, the ERD is used <font color="50c878">to communicate the logical structure of the database to users</font>. In particular, the ERD effectively communicates the logic of the database to users.</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Components of an ERD</h2>
+             <p>An ERD typically consists of four different graphical components:</p>
+            <ul>
+               <li style="list-style-type: none;">
+                  <ol><b>
+                     <li>Entity</li>
+                     <li>Relationship</li>
+                     <li>Cardinality</li>
+                     <li>Attribute</li>
+                  </b></ol>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Classification of Relationship</h2>
+            <ul>
+               <li><b>Optional Relationship</b>
+                  <ul>
+                     <li>An Employee may or may not be assigned to a Department</li>
+                     <li>A Patient may or may not be assigned to a Bed</li>
+                  </ul></li>
+               <li><b>Mandatory Relationship</b>
+                  <ul>
+                     <li>Every Course must be taught by at least one Teacher</li>
+                  </ul>Every mother have at least a Child</li>
+            </ul>
+            <ul><br>
+               <li>For a binary relationship set the mapping cardinality must be one of the following types:
+                  <ul>
+                     <li><b>One to one</b>
+                        <ul>
+                           <li>A Manager Head one Department and vice versa</li>
+                        </ul></li>
+                        <li><b>One to many ( or many to one)</b>
+                           <ul>
+                              <li>Employees Works in one Department or One Department has many Employees</li>
+                        </ul></li>
+                        <li><b>Many to many</b>
+                           <ul>
+                              <li>A Teacher Teaches many Students and A student is taught by many Teachers
+</li>
+                        </ul></li>
+
+                  </ul></li>
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Cardinality Constraints</h2>
+            <img src="images/example16.png">
+            <ul>
+               <li>In our model, we wish to indicate that each school may enroll many students, or may not enroll any students at all.  </li>
+               <li>We also wish to indicate that each student attends exactly one school.  The following diagram indicates this optionality and cardinality: <br>
+               <img src="images/example17.png"></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>General Steps to create an ERD</h2>
+            <ul>
+               <li>Identify the entity</li>
+               <li>Identify the entity's attributes</li>
+               <li>Identify the Primary Keys</li>
+               <li>Identify the relation between entities</li>
+               <li>Identify the Cardinality constraint</li>
+               <li>Draw the ERD</li>
+               <li>Check the ERD</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Steps in buildiong an ERD</h2>
+            <img src="images/example18.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Developing an ERD</h2>
+            <p>The proess has ten steps:</p>
+            <ol>
+               <li>Identify Entities</li>
+               <li>Find Relationships</li>
+               <li>Draw Rough ERD</li>
+               <li>Fill in Cardinality</li>
+               <li>Define Primary Keys</li>
+               <li>Draw Key-Based ERD</li>
+               <li>Identify Attributes</li>
+               <li>Map Attributes</li>
+               <li>Draw fully attributed ERD</li>
+               <li>Check Results</li>
+            </ol>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>A Simple Example</h2>
+            <p>A company has several departments. Each department has a supervisor and at least one employee. Employees must be assigned to at least one, but possibly more departments. At least one employee is assigned to a project, but an employee may be on vacation and not assigned to any projects. The important data fields are the names of the departments, projects, supervisors and employees, as well as the supervisor and employee number and a unique project number.</p>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Identity Entities</h2>
+            <ul>
+               <li>One approach to this is to work through the information and highlight those words which you think correspond to entities.</li>
+               <li>A <font color="50c878">company</font> has several <font color="50c878">departments</font>. Each department has a <font color="50c878">supervisor</font> and at least one <font color="50c878">employee</font>. Employees must be assigned to at least one, but possibly more departments. At least one employee is assigned to a <font color="50c878">project</font>, but an employee may be on vacation and not assigned to any projects. The important data fields are the names of the departments, projects, supervisors and employees, as well as the supervisor and employee number and a unique project number.</li>
+               <li>A true entity should have more than one instance </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Find Relationships</h2>
+            <ul>
+               <li>Aim is to identify the associations, the connections between pairs of entities. </li>
+               <li>A simple approach to do this is using a relationship matrix (table) that has rows and columns for each of the identified entities.</li>
+               <img src="images/example19.png">
+               <li>Go through each cell and decide whether or not there is an association. For example, the first cell on the second row is used to indicate if there is a relationship between the entity "<font color="50c878">Employee</font>" and the entity "<font color="50c878">Department</font>". </li>
+               <img src="images/example20.png">
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Identified Relationships</h2>
+            <p>Names placed in the cells are meant to capture/describe the relationships. So you can use them like this</p>
+            <ul>
+               <li>A Department is <font color="50c878">assigned</font> an employee</li>
+               <li>A Department is <font color="50c878">run</font> by a supervisor</li>
+               <li>An employee <font color="50c878">belongs</font> to a department</li>
+               <li>An employee <font color="50c878">works</font> on a project</li>
+               <li>A supervisor <font color="50c878">runs</font> a department</li>
+               <li>A project <font color="50c878">uses</font> an employee</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Draw Rough ERD</h2>
+            <p>Draw a diragram and: </p>
+               <ul>
+                  <li>Place all the <font color="40B5AD">entities</font> in <font color="50c878">rectangles</font></li>
+                  <li>Use <font color="50c878">diamonds</font> and <font color="50c878">lines</font> to represent the <font color="40B5AD">relationships</font> between <font color="40B5AD">entities</font>.</li>
+                  <li>General Example</li>
+                     <img src="images/example21.png"><br>
+                     <img src="images/example22.png"><br>
+                     <img src="images/example23.png"><br>
+                     <div class="expl"><img src="images/example24.png"></div><br>
+                     <img src="images/example25.png">
+               </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Fill in Cardinality</h2>
+            <ul>
+               <li>Supervisor
+                  <ul>
+                     <li>Each department has <font color="50c878">one</font> supervisor</li>
+                  </ul></li>
+               <li>Department
+                  <ul>
+                     <li>Each supervisor has <font color="50c878">one</font> department</li>
+                     <li>Each employee can belong to <font color="50c878">one or more</font> departments</li>
+                  </ul></li>
+               <li>Employee
+                  <ul>
+                     <li>Each department must have <font color="50c878">one or more</font> employees</li>
+                     <li>Each project must have <font color="50c878">one or more</font> employees</li>
+                     </ul></li>
+               <li>Project 
+                  <ul>  
+                     <li>Each employee can have <font color="50c878">0 or more</font> projects</li>
+                  </ul></li>    
+            </ul>
+            <br>
+            <p>The cardinality of a relationship can only have the following values
+               <ul style="list-style-type: none;">
+                  <li><font color="50c878">-One and only one</font></li>
+                  <li><font color="50c878">-One or more</font></li>
+                  <li><font color="50c878">-Zero or more</font></li>
+                  <li><font color="50c878">-Zero or one</font></li>
+               </ul></p>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Cardinality Notation</h2>
+           <img src="images/example26.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Cardinality Examples</h2>
+           <img src="images/example27.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>ERD wtih cardinality</h2>
+           <img src="images/example28.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Identify Attributes</h2>
+           <ul>
+              <li>In this step we try to identify and name all the attributes essential to the system we are studying without trying to match them to particular entities. </li>
+              <li>The only attributes indicated are the names of the departments, projects, supervisors and employees, as well as the supervisor and employee NUMBER and a unique project number.</li>
+           </ul>
+           <br>
+           <h2>Map Attributes</h2>
+           <ul>
+              <li>For each attribute we need to match it with exactly one entity. Often it seems like an attribute should go with more than one entity (e.g. Name). In this case you need to add a modifier to the attribute name to make it unique (e.g. Customer Name, Employee Name, etc.) or determine which entity an attribute "best' describes</li>
+              <img src="images/example29.png">
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Check ERD Results</h2>
+         <ul>
+            <li>Look at your diagram from the point of view of a system owner or user. <font color="50c878">Is everything clear? </font></li>
+            <li>Check through the <font color="50c878">Cardinality pairs</font>.</li>
+            <li>Also, look over the list of attributes associated with each entity to see if anything has been omitted.</li>
+         </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+</body>
+
+
+<!-- reviews section ends -->
+
+<!-- couter section ends -->
+
+<!-- about section starts  -->
+<br><br>
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section>
+
+      <div class="credit">&copy; copyright @ 2022 by <span>PCNL FTA-DBMS</span> | All rights reserved!</div>
+
+   </section>
+
+</footer>
+
+<!-- footer section ends -->
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

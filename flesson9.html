@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FTA-DBMS App</title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="fundamentals.html" class="logo" ><img src="images/back.png"  style="width:30px;height:30px;"></a>
+
+      
+   </section>
+
+</header>
+
+<!-- header section ends -->
+<br><br><br>
+<!-- home section starts  -->
+
+<section class="home" id="home">
+   <div class="row">
+      <div class="content">
+        <h3>Lesson 8.2<span><br>Database Design Example</span></h3>
+      </div>
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Topics</h2>
+            <ul>
+               <li>Hospital Database</li>
+               <li>E-R Design
+                  <ul>
+                     <li>Entities</li>
+                     <li>Relationships</li>
+                  </ul></li>
+               <li>Converting E-R Model to Relational Model
+                  <ul>
+                     <li>Tables</li>
+                     <li>Queries</li>
+                  </ul></li>
+               <li>Company Database</li>
+               <li>Summary</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Hospital Database (1)</h2>
+            <ul>
+               <li>The database for a hospital or a clinic.</li>
+               <li>It contains information about people who have been admitted at least once in the hospital. A person can be admitted several times to the samw or different wards. People are identified by a Code.</li>
+               <li>The database should describes all the hospitals's wards, showing for each ward the name and the respective consultant.</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Hospital Database (2)</h2>
+            <ul>
+               <li>The database should contains information about all doctors in the hospital, giving their surnames, first names, wards, and so on.</li>
+               <li>For each patient the given treatment at any date is stored in the database.</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>E-R Model</h2>
+            <ul>
+               <li>Entities:
+                  <ul>
+                     <li>Patient</li>
+                     <li>Doctor</li>
+                     <li>Ward</li>
+                  </ul></li>
+               <li>Relationships:
+                  <ul>
+                     <li>A doctor works in a ward</li>
+                     <li>A patient is admitted to a ward at a given date.</li>
+                     <li>A doctor gives a treatment to a patient at a given date.</li>
+                     <li>A ward has a consultant who is a doctor</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Patient Entity and its Attributes</h2>
+            <ul>
+               <li>A patient is identified by a Patient Code. The attributes are:
+                  <ul>
+                     <li>PatientCode</li>
+                     <li>Name</li>
+                     <li>Surname</li>
+                     <li>Date of Birth</li>
+                     <li>Place of Birth</li>
+                     <li>Gender</li>
+                     <li>Address</li>
+                     <li>Phone</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Doctor Entity and its Attibutes</h2>
+            <ul>
+               <li>For each doctor a code is used. The attributees are:
+                  <ul>
+                     <li>DoctorID</li>
+                     <li>Name</li>
+                     <li>Surname</li>
+                     <li>Expertise</li>
+                     <li>Address</li>
+                     <li>Phone</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Ward Entity</h2>
+            <ul>
+               <li>Ward has the following attributes:
+                  <ul>
+                     <li>WardID</li>
+                     <li>Name</li>
+                     <li>Building</li>
+                     <li>Phone</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>E-R Diagram of the Hospital</h2>
+            <img src="images/example116.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Relationships(1)</h2>
+            <ul>
+               <li>Each doctor works in a ward</li>
+               <li>A ward has many doctors</li>
+               <li>The relationship between ward and doctor is a one to many relationship. This relationship is defined as a foreign key.</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Relationships(2)</h2>
+            <ul>
+               <li>Admission:
+                  <ul>
+                     <li>A patient is admitted to a ward</li>
+                     <li>A patient may be admitted to different wards at different dates.</li>
+                     <li>A ward admits many patiens</li>
+                     <li>Admission is a many to many relationship</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Relationships(3)</h2>
+            <ul>
+               <li>Treatment
+                  <ul>
+                     <li>A doctor gives a treatment to a patient</li>
+                     <li>A doctor can give treatment to many patients</li>
+                     <li>A patient gets treatment from many doctors (at different dates)</li>
+                     <li>The treatment is a many to many relationship between doctor and patient.</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Relationships(4)</h2>
+            <ul>
+               <li>Each ward has a consultant who is a doctor.
+                  <ul>
+                     <li>A doctor can be consultant in only one ward</li>
+                     <li>Each ward has only one consultant</li>
+                     <li>The relationship is a one to one relationship</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Relational Model for the Hospital Database</h2>
+            <ul>
+               <li style="list-style-type: none;">The following tables are created:
+                  <ol>
+                     <li>Patient table (patientCode primary key)</li>
+                     <li>Doctor table (doctorID primary key, wardsID foreign key)</li>
+                     <li>Ward table (wardID primary key, Consultant is foreign key to doctor table)</li>
+                  </ol></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Converting relationships</h2>
+            <ul>
+               <li>Admission is converted to a table as
+                  <ul>
+                     <li>Admission < PatientCode, Wardcode, DateAdmitted, DateDischarged >
+                        <ul>
+                           <li>PatientCode and WardCpde are foreign keys</li>
+                           <li><b>Primary Key:</b> PatientCode+WardCode+DateAdmitted</li>
+                        </ul>
+                     </li>
+                     <li>Treatment <PatientCode, DoctorID, Date, Treatment>
+                        <ul>
+                           <li>Patientcode and DoctorID are foreign keys. Treatment is a string</li>
+                           <li><b>Primary Key:</b> PatientCode+DoctorID+Date</li>
+                        </ul></li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Some Queries</h2>
+            <ul>
+               <li>The following queries are given as example:
+                  <ul>
+                     <li>Create table for ward entity</li>
+                     <li>Insert data into Patient table</li>
+                     <li>Select all patients admitted on Mau 10, 2010</li>
+                     <li>Select all patients treated by Doctor 'Hasan"</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Create Ward Table
+               <ul style="list-style-type: none;">
+                  <li>(
+                     <ul style="list-style-type: none;">
+                        <li>WardID char(10) Primary Key,</li>
+                        <li>WardName varchar,</li>
+                        <li>Building char(5)</li>
+                        <li>Phone char(13)</li>
+                     </ul></li>
+               </ul></h2>
+            
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Inset Data into Patient Table</h2>
+            <li>Insert Into patient (PatientCode, Name, Surname, DateOfBirth, PlaceOfBirth, Gender, Address, Phone) values (100, 'Ali', 'Velioglu', 1980, 'Ankara’, ‘Male’, ‘100 Yil’ , ‘123456’ )</li>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>List Patients Admitted on Maty 10, 2010</h2>
+            <ul style="list-style-type: none;">
+               <li>Select Name, Surname</li>
+               <li>FROM Patiend JOIN Admission ON Patient.PatientCode = Admission.PatientCode</li>
+               <li>WHERE DateAdmitted = '2010=5=10'</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>List Patients Treated by Doctor 'Hasan'</h2>
+            <ul style="list-style-type: none;">
+               <li>SELECT Patient.Name.Surname</li>
+               <li>FROM Patient, Treatment, Doctor</li>
+               <li>WHERE
+                  <ul style="list-style-type: none;">
+                     <li>Patient.PatientCode = Treatment.PatientCode</li>
+                     <li>AND</li>
+                     <li>Treatment.DoctorID = Doctor.DoctorID</li>
+                     <li>AND</li>
+                     <li>Doctor.Name = 'Hasan'</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Company Example</h2>
+            <ul>
+               <li>A company has several projects.</li>
+               <li>Each project is carried out ion a different city, has s start date, period and budget.</li>
+               <li>For each project some products are needed.</li>
+               <li>These products are supplied by different suppliers</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Entities</h2>
+            <ul>
+               <li>Project:
+                  <ul>
+                     <li>Attributes: Project Code, Project Name, Project Start Date, Project Duration, Project Budget</li>
+                  </ul></li>
+               <li>Product:
+                  <ul>
+                     <li>Attributes: Product Code, Product Name, Price</li>
+                  </ul></li>
+               <li>Supplier:
+               <ul>
+                  <li>Attributes: Supplier ID, Supplier Name, Location, Telephone</li>
+               </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Relationships</h2>
+            <ul>
+               <li>A supplier SUPPLIES some products fo a project</li>
+               <li>A project may get products from differnt suppliers</li>
+               <li>A supplier may supply a product for a different projects
+                  <ul>
+                     <li>there is a ternary relationship between supplier, product, and project</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>E-R Model</h2>
+            <img src="images/example117.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Create Table for Relationship</h2>
+            <ul style="list-style-type: none;">
+               <li>Create tabke supplies</li>
+               <li>(
+                  <ul style="list-style-type: none;">
+                     <li>supplyCode Integer Primary key,</li>
+                     <li>sID Integer References supplier(ID),</li>
+                     <li>pcode Integer References product(code),</li>
+                     <li>pID Integer References project(code),</li>
+                     <li>quantity Integer,</li>
+                     <li>supplyDate Date</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Summary</h2>
+            <ul>
+               <li>Read the problem requirements very carefully</li>
+               <li>Find entities and relationships</li>
+               <li>Create E-R model for the database</li>
+               <li>Convert E-R model to Relational Model</li>
+               <li>Create tables</li>
+               <li>Insert data into the tables</li>
+               <li>Write some queries to use the database (depends on the requirements)</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+
+</body>
+
+
+<!-- reviews section ends -->
+
+<!-- couter section ends -->
+
+<!-- about section starts  -->
+<br><br>
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section>
+
+      <div class="credit">&copy; copyright @ 2022 by <span>PCNL FTA-DBMS</span> | All rights reserved!</div>
+
+   </section>
+
+</footer>
+
+<!-- footer section ends -->
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FTA-DBMS App</title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="fundamentals.html" class="logo" ><img src="images/back.png"  style="width:30px;height:30px;"></a>
+
+      
+   </section>
+
+</header>
+
+<!-- header section ends -->
+<br><br><br>
+<!-- home section starts  -->
+
+<section class="home" id="home">
+   <div class="row">
+      <div class="content">
+        <h3>Lesson 6<span><br>SQL Query Language (3)</span></h3>
+      </div>
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Topics</h2>
+            <ul>
+               <li>Aggregate Functions i  Queries
+                  <ul>
+                     <li>count</li>
+                     <li>sum</li>
+                     <li>max</li>
+                     <li>min</li>
+                     <li>avg</li>
+                  </ul></li>
+               <li>Group by queries</li>
+               <li>Set Operations in SQL Queries</li>
+               <li>Views</li>
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Aggregate Functions</h2>
+            <ul>
+               <li>Tables are collections of records with schema.</li>
+               <li>Aggregate functions are used to get information about the records of a table such as:
+                  <ul>
+                     <li>The maximum vaue in a column of a table</li>
+                     <li>The number of records in a table</li>
+                     <li>Average of the values in a column of a table</li>
+                  </ul></li>
+               <li>Most important aggregate functions are:
+                  <ul>
+                     <li>count</li>
+                     <li>sum</li>
+                     <li>max</li>
+                     <li>min</li>
+                     <li>avg</li>
+                  </ul></li>
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Count Function</h2>
+            <ul>
+               <li><b>Count</b> returns the numbe of rows or distinct values.</li>
+               <li><b>Count</b> is used with <b>Select</b> query</li>
+               <li><b>Count</b> can be used with <b>distinct</b> option</li><br>
+               <li>Syntax
+                  <ul style="list-style-type: none;">
+                     <li><b>Select count</b> ( [distinct] attribute list)</li>
+                     <li><b>From</b> table_name</li>
+                     <li><b>where</b> condition</li>
+                  </ul></li>
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Example</h2>
+            <ul>
+               <li>Find the number of employees:
+                  <ul style="list-style-type: none;">
+                     <li>select count(*)</li>
+                     <li>From Employee</li>
+                  </ul></li><br>
+               <li>Find the number of different values on the attribute Salary for all the rows in Employee:
+                  <ul style="list-style-type: none;">
+                     <li>Select count(distinct Salary)</li>
+                     <li>From Employee</li>
+                  </ul></li>
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Example Query Results</h2>
+            <img src="images/example72.png">
+            <ul>
+               <li>Query 1 : 8</li>
+               <li>Query 2 : 6</li>
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Sum Function</h2>
+            <ul>
+               <li>Sum finds the total sum of the values in an attribute.</li>
+               <li>Sum cannot be used with non-numeric attributes.
+                  <ul style="list-style-type: none;">
+                     <li>e.g. Find the sum of the salaries of the Administration department
+                        <br>select su  (Salary) as SumSalary
+                        <br>from Employee
+                        <br>where Dept='Administration'</li>
+
+                         <div class="expl"><img src="images/example73.png"></div>
+                  </ul></li>
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Min, Max and Avg functions</h2>
+            <ul>
+               <li>Min, Max, and Avh functions are used to find the minimum, maximum and average of the values in the attriibute.
+                  <br><br>e.g. Find the maximum salary among the employees who work in a department based in London.<br><br>
+                  <ul style="list-style-type: none;">
+                     <li>Select max(Salary) as MaxLondonSal</li>
+                     <li>From Employee, Department</li>
+                     <li>Where
+                        <ul style="list-style-type: none;">
+                           <li>Employee.DeptCode = Department.DeptCode</li>
+                           <li>and</li>
+                           <li>Department.City = 'London'</li>
+                        </ul></li>
+                  </ul></li>
+                  <div class="expl"><img src="images/example74.png"></div><br>
+                        <img src="images/example75.png">
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Group By</h2>
+            <ul>
+               <li>Aggregate functions can also be used with sub-sets of the table records.</li>
+               <li><b>Group by</b> puts the records in subsets (groups)</li>
+               <li>Aggregate functions can be used with <b>Group By</b></li>
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Group By Example</h2>
+            <ul>
+               <li>Find the sum of salaries of all the employees of each department
+                  <br>
+                  <br>Select Dept, sum(Salary)as TotSal
+                  <br>From Employee
+                  <br>Group By Dept
+                  <br><div class="expl"><img src="images/example76.png"></div></li>
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>How Group By Works?</h2>
+            <ul style="list-style-type: none;">
+               <li>First the query is executed</li>
+               <li>then the query result is divided into subsets</li>
+               <li>Next aggregate function is executed for each group</li>
+               <img src="images/example77.png">
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Conditions on Aggregate Function Result</h2>
+            <ul>
+               <li>When conditions are on the result of an aggregate ooperatir, it is necessary to use the <b>having</b> clauyse</li>
+               <br>
+               <li>e.g. Find which departments spend more than 100 on salaries
+                  <br>
+                  <ul style="list-style-type: none;">
+                     <li>Select Dept, sum(Salary) as TotSal</li>
+                     <li>from Employee</li>
+                     <li>group by Dept</li>
+                     <li>having sum(Salary)>100</li>
+                     <div class="expl"><img src="images/example76.png"></div>
+                  </ul></li>
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Example</h2>
+            <ul>
+               <li>Find the departments in which the average salary of employees older than 30 is higher than 25;
+                  <br>
+                  <br>Select Dept, avg(Salary)
+                  <br>from Employee
+                  <br>whereAge > 30
+                  <br>group by Dept
+                  <br>having avg(Salary) > 25</li>
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Set Operations in SQL Queries</h2>
+            <ul>
+               <li>Union, Intersection and Set Difference operations can be carried out with SQL</li>
+               <li>e.g. Find the first names and surnames of the employees
+                  <ul style="list-style-type: none;">
+                     <br>
+                     <li>This query tries to find the union of two sets</li>
+                     <li>1 - Set of first names</li>
+                     <li>2 - Set of surnames</li>
+                  </ul></li>
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Union in SQL Queries</h2>
+            <ul style="list-style-type: none;">
+               <li>Select FirstName as Name</li>
+               <li>from Employee</li>
+               <li><b>union</b></li>
+               <li>Select Surname</li>
+               <li>from Employee</li>
+            </ul>         
+            <ul>
+               <br>
+               <li>Dupliate are removed by UNION</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Union Query Result</h2>
+            <img src="images/example79.png">   
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Inersection in SQL</h2>
+            <ul style="list-style-type">
+               <li>Find the surnames of employees that are also first names:<br>
+                  <ul style="list-style-type: none;">
+                     <li>select Firstname as Name</li>
+                     <li>from Employee</li>
+                     <li>intersect</li>
+                     <li>select surname</li>
+                     <li>from Employee</li>
+                  </ul></li>
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Insert Query Result</h2>
+            <img src="images/example80.png">      
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Set Difference in SQL</h2>
+            <ul>
+               <li> Find the first names of employees that are not alspo surnames: <br>
+               <ul style="list-style-type: none;">
+                     <li>select Firstname as Name</li>
+                     <li>from Employee</li>
+                     <li>except</li>
+                     <li>select surname</li>
+                     <li>from Employee</li>
+                  </ul></li>
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Set Difference Result</h2>
+            <img src="images/example81.png">       
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Views</h2>
+            <ul>
+               <li>A view is a virtual table. It does not physically exist. Rather, it is created byt a query joining one or more tables</li>
+               <li>A view can be a subset of a table</li>
+               <li>Syntax:
+                  <ul style="list-style-type: none;">
+                     <li>create ciew <i>ViewName [ (AttributeList) ] as SelectSQL</i></li>
+                  </ul></li>
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Creating a Sample View</h2>
+            <ul>
+               <li>Create a view for the employees of Administration department using their Name, Surname, and Salary.</li><br>
+               <li>The view is the result of a select query on the employee table</li>
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Example Creating Views</h2>
+            <ul style="list-style-type: none;">
+               <li>Create view AdminEmployee</li>
+               <li>(FirstName, Surname, Salary) as</li>
+               <br>
+               <li>Select Firstname, Surname, Salary</li>
+               <li>from Employee</li>
+               <li>where Dept = 'Administration'</li>
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Example View</h2>
+            <img src="images/example82.png">       
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Summary</h2>
+            <ul>
+               <li>Aggregate functions are used to get information about the records of a tablle</li>
+               <li>Set oprations are also used in SQL tables</li>
+               <li>A virtual table named view can be created using some of the records or attributes of one more tables.</li>
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+
+
+
+</body>
+
+
+<!-- reviews section ends -->
+
+<!-- couter section ends -->
+
+<!-- about section starts  -->
+<br><br>
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section>
+
+      <div class="credit">&copy; copyright @ 2022 by <span>PCNL FTA-DBMS</span> | All rights reserved!</div>
+
+   </section>
+
+</footer>
+
+<!-- footer section ends -->
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

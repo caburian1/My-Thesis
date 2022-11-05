@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FTA-DBMS App</title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="advanced.html" class="logo" ><img src="images/back.png"  style="width:30px;height:30px;"></a>
+
+      
+   </section>
+
+</header>
+
+<!-- header section ends -->
+<br><br><br>
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+   <div class="row">
+
+      <div class="content">
+        <h3>Lesson 4<span><br>Entity Relationship (ER) Modeling</span></h3>
+      </div>
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Objectives</h2>
+           <ul>In this chapter, students will learn:
+            <ul>
+               <li>The main characteristics of entity relationship components</li>
+               <li>How relationships between entities are defined, refined, and incorporated into the database design process</li>
+               <li>How ERD components affect database design and implementation</li>
+               <li>That real-world database design often requires the reconciliation of conflicting goals</li>
+            </ul></ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>The Entity Relationship Model (ERM)</h2>
+           <ul>
+              <li>ER model forms the basis of an ER diagram</li>
+              <li>ERD represents conceptual database as viewed by end user</li>
+              <li>ERDs depict database’s main components:
+               <ul>
+                  <li>Entities</li>
+                  <li>Attributes</li>
+                  <li>Relationships</li>
+               </ul></li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Attributes</h2>
+           <ul>
+              <li>Characteristics of entities</li>
+              <li>Chen notation: attributes represented by ovals connected to entity rectangle with a line
+               <ul>
+                  <li>Each oval contains the name of attribute it represents</li>
+               </ul></li>
+               <li>Crow’s Foot notation: attributes written in attribute box below entity rectangle</li>
+               <img src="images/example152.png">
+               <li>Required attribute: must have a value</li>
+               <li>Optional attribute: may be left empty</li>
+               <li>Domain: set of possible values for an attribute
+                  <ul>
+                     <li>Attributes may share a domain</li>
+                  </ul></li>
+               <li>Identifiers: one or more attributes that uniquely identify each entity instance</li>
+               <li>Composite identifier: primary key composed of more than one attribute</li>
+               <img src="images/example153.png">
+               <li>Composite attribute can be subdivided</li>
+               <li>Simple attribute cannot be subdivided</li>
+               <li>Single-value attribute can have only a single value</li>
+               <li>Multivalued attributes can have many values</li>
+                <img src="images/example154.png">
+               <li>M:N relationships and multivalued attributes should not be implemented
+                  <ul>
+                     <li>Create several new attributes for each of the original multivalued attributes’ components</li>
+                     <li>Create new entity composed of original multivalued attributes’ components</li>
+                  </ul></li>
+               <li>Derived attribute: value may be calculated from other attributes
+                  <ul>
+                     <li>Need not be physically stored within database</li>
+                  </ul></li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <img src="images/example155.png">
+           <img src="images/example156.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Relationships</h2>
+           <ul>
+              <li>Association between entities</li>
+              <li>Participants are entities that participate in a relationship</li>
+              <li>Relationships between entities always operate in both directions</li>
+              <li>Relationship can be classified as 1:M</li>
+              <li>Relationship classification is difficult to establish if only one side of the relationship is known</li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Connectivity and Cardinality</h2>
+           <ul>
+              <li>Connectivity 
+                  <ul>
+                     <li>Describes the relationship classification</li>
+                  </ul></li>
+               <li>Cardinality 
+                  <ul>
+                     <li>Expresses minimum and maximum number of entity occurrences associated with one occurrence of related entity</li>
+                  </ul></li>
+               <li>Established by very concise statements known as business rules</li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <img src="images/example157.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Existence Dependence</h2>
+           <ul>
+              <li>Existence dependence
+               <ul>
+                  <li>Entity exists in database only when it is associated with another related entity occurrence</li>
+               </ul></li>
+               <li>Existence independence
+                  <ul>
+                     <li>Entity can exist apart from one or more related entities</li>
+                     <li>Sometimes such an entity is referred to as a strong or regular entity</li>
+                  </ul></li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Relationship Strength</h2>
+           <ul>
+              <li>Weak (non-identifying) relationships
+               <ul>
+                  <li>Exists if PK of related entity does not contain PK component of parent entity</li>
+               </ul></li>
+               <li>Strong (identifying) relationships
+                  <ul>
+                     <li>Exists when PK of related entity contains PK component of parent entity</li>
+                  </ul></li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example158.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example159.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Weak Entities</h2>
+           <ul>
+              <li>Weak entity meets two conditions
+               <ul>
+                  <li>Existence-dependent</li>
+                  <li>Primary key partially or totally derived from parent entity in relationship</li>
+               </ul></li>
+               <li>Database designer determines whether an entity is weak based on business rules</li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example160.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example161.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Relationship Participation</h2>
+           <ul>
+              <li>Optional participation
+               <ul>
+                  <li>One entity occurrence does not require corresponding entity occurrence in particular relationship</li>
+               </ul></li>
+               <li>Mandatory participation
+                  <ul>
+                     <li>One entity occurrence requires corresponding entity occurrence in particular relationship</li>
+                  </ul></li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example162.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example163.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Relationship Degree</h2>
+           <ul>
+              <li>Indicates number of entities or participants associated with a relationship</li>
+              <li>Unary relationship
+               <ul>
+                  <li>Association is maintained within single entity </li>
+               </ul></li>
+               <li>Binary relationship 
+                  <ul>
+                     <li>Two entities are associated</li>
+                  </ul></li>
+               <li>Ternary relationship 
+                  <ul>
+                     <li>Three entities are associated</li>
+                  </ul></li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example164.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example165.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Recursive Relationships</h2>
+            <ul>
+               <li>Relationship can exist between occurrences of the same entity set
+                  <ul>
+                     <li>Naturally found within unary relationship</li>
+                  </ul></li>
+            </ul>
+          <img src="images/example166.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example167.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example168.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Associative (Composite) Entities</h2>
+           <ul>
+              <li>Also known as bridge entities</li>
+              <li>Used to implement M:N relationships</li>
+              <li>Composed of primary keys of each of the entities to be connected</li>
+              <li>May also contain additional attributes that play no role in connective process</li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example169.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example170.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Developing an ER Diagram</h2>
+           
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2></h2>
+           <ul>
+              <li>Database design is an iterative process
+               <ul>
+                  <li>Create detailed narrative of organization’s  description of operations</li>
+                  <li>Identify business rules based on description of operations</li>
+                  <li>Identify main entities and relationships from business rules</li>
+                  <li>Develop initial ERD</li>
+                  <li>Identify attributes and primary keys that adequately describe entities</li>
+                  <li>Revise and review ERD</li>
+               </ul></li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example171.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example172.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example173.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example174.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example175.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example176.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example177.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example178.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example179.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example180.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example181.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+           <h2>Database Design Challenges: Conflicting Goals</h2>
+           <ul>
+              <li>Database designers must make design compromises
+               <ul>
+                  <li>Conflicting goals: design standards, processing speed, information requirements</li>
+               </ul></li>
+               <li>Important to meet logical requirements and design conventions</li>
+               <li>Design is of little value unless it delivers all specified query and reporting requirements</li>
+               <li>Some design and implementation problems do not yield “clean” solutions</li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <img src="images/example182.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+          <h2>Summary</h2>
+          <ul>
+             <li>Entity relationship (ER) model 
+               <ul>
+                  <li>Uses ERD to represent conceptual database as viewed by end user</li>
+                  <li>ERM’s main components:
+                     <ul>
+                        <li>Entities</li>
+                        <li>Relationships</li>
+                        <li>Attributes</li>
+                     </ul></li>
+                  <li>Includes connectivity and cardinality notations</li>
+               </ul></li>
+               <li>Connectivities and cardinalities are based on business rules</li>
+               <li>M:N relationship is valid at conceptual level
+                  <ul>
+                     <li>Must be mapped to a set of 1:M relationships</li>
+                  </ul></li>
+               <li>ERDs may be based on many different ERMs</li>
+               <li>UML class diagrams are used to represent the static data structures in a data model</li>
+               <li>Database designers are often forced to make design compromises</li>
+          </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+</body>
+
+
+<!-- reviews section ends -->
+
+<!-- couter section ends -->
+
+<!-- about section starts  -->
+<br><br>
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section>
+
+      <div class="credit">&copy; copyright @ 2022 by <span>PCNL FTA-DBMS</span> | All rights reserved!</div>
+
+   </section>
+
+</footer>
+
+<!-- footer section ends -->
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

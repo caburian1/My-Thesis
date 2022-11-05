@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8' ?>
+<widget
+    android-versionCode = '1'
+    id = 'com.iBuldThings.IlocoFoodRecipe'
+    version = '1.0.0'
+    xmlns = 'https://wwww.w3.org/ns/widgets'>
+    <name>IlocoFoodRecipe</name>
+    <description>4 button IlocoFoodRecipe</description>
+    <author>ChristianCaburian</author>
+
+    <preference name = 'orientation' value = 'portrait'/>
+
+    </widget>
+    

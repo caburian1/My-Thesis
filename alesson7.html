@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FTA-DBMS App</title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="advanced.html" class="logo" ><img src="images/back.png"  style="width:30px;height:30px;"></a>
+
+      
+   </section>
+
+</header>
+
+<!-- header section ends -->
+<br><br><br>
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+   <div class="row">
+
+      <div class="content">
+        <h3>Lesson 7<span><br>Data Migration</span></h3>
+      </div>
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Data Migration</h2>
+            <ul>
+               <li>is the process of transferring data between storage types, formats or computer systems. It is a key conconsolidation. </li>
+               <li>sideration for any system implementation, upgrade or Typically, data migration occurs during an upgrade of existing hardware or transfer to a completely new system.</li>
+               <li>occurs for a variety of reasons, including server or storage equipment replacements, maintenance or upgrades, application migration, website consolidation and data center relocation.</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Reason for Data Migration </h2>
+            <p><b>UPGRADE!</b></p>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Categories of Data Migration</h2>
+            <ul>
+               <li>Data is stored on various media in files or databases, and is generated and consumed by software applications which in turn support business processes. </li>
+            </ul>
+
+            <ol>
+               <li><b>Storage Migration</b>
+                  <ul>
+                     <li>A business may choose to rationalize the physical media to take advantage of more efficient storage technologies. This will result in having to move physical blocks of data from one tape or disk to another, often using virtualization techniques. </li>
+                  </ul></li>
+               <li><b>Database Migration</b>
+                  <ul>
+                     <li>Similarly it may be necessary to move from one database vendor to another, or to upgrade the version of database software being used. The latter case is less likely to require a physical data migration, but this can happen with major upgrades. </li>
+                  </ul></li>
+               <li><b>Application Migration</b>
+                  <ul>
+                     <li>changing application vendor – for instance a new platform will inevitably involve substantial transformation as almost every application or suite operates on its own specific data model and also interacts with other applications any systems within the enterprise application integration environment.</li>
+                  </ul></li>
+               <li><b>Business Process Migration</b>
+                  <ul>
+                     <li>Business processes operate through a combination of human and application systems actions, often orchestrated by business process management tools. When these change they can require the movement of data from one store, database or application to another to reflect the changes to the organization and information about customers, products and operations. </li>
+                     <li>Examples of such migration drivers are mergers and acquisitions, business optimization and reorganization to attack new markers or respond to competitive threat.</li>
+                  </ul></li>
+            </ol>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Stages of Data Migration</h2>
+            <ul>
+               <li><b>Pre Migration </b>- Analysis, Mapping, Design </li>
+               <li><b>Migration </b>- Transform, Normalize and backup</li>
+               <li><b>Post Migration </b>- Quality Control, Clean-up, Maintenance.</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <img src="images/example188.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Pre-Migration</h2>
+            <ul>
+               <li><b>Analysis </b>- The analysis phase of data migration should be scheduled to occur concurrently with the analysis phase of the core project. The aim of the analysis phase in data migration projects is to identify the data sources that must be transported into the new system. For example what is my source database and what is my target database.</li>
+               <li><b>Mapping </b>- Mapped each source field to target field. Eg. In my source table I have emp_id, salary as column in target database what should be my column name and its datatype.</li>
+               <li><b>Design </b>- After you have decided upon the legacy data sources and have conducted thorough data analysis, you must begin the roster selection. This involves going through the list of data elements from each and every source data structure, and deciding whether to migrate each one.</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Migration</h2>
+            <ul>
+               <li><b>Transform </b>- After the design phase, Transform phase starts. In this phase data transform happen from source to target system. For this organization can use different ETL(Extract, Transform, Load)  process.</li>
+               <li><b>Normalizze </b>- After moving the data to Target system, data normalization required. Such as remove inconsistence data, remove duplicate data, storing data based on Normal form. Also moving data from stage layer to Target layer.</li>
+               <img src="images/example189.png">
+               <li><b>Back Up </b>- This is one of the important phase of the migration. After transforming data from source to target state organization need to create  backup process. This will help during database maintenance and recovery process.</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Post Migration</h2>
+            <ul>
+               <li><b>Quality Control</b>- This is the import phase in Post migration process. Here testing team need to check target database table structure, column type and its value. Also need to map this value with source system value. If any error occur then raise an defect and assign to the concern team. Also ask Business to verify their system whether the output is as expected or not. </li>
+               <li><b>Clean-Up </b>- During migration process data transformation happened through different channels, such as file system, Temporary tables etc. After the migration process complete need to clean these temporary system. </li>
+               <li><b>Maintenance </b>- In all organization they have separate team which take care of this process, they maintain the Database, do housekeeping. Organization spend huge amount in the maintenance phase.</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Disadvantages of Data Migration</h2>
+               <ul>
+                  <li>Migration addresses the possible obsolescence of the data carrier, but does address the fact that certain technologies which run the data may be abandoned altogether, leaving migration useless.</li>
+                  <li>Time consuming – migration is continual process, which must be repeated every time a medium reaches obsolescence, for all data objects stored on a certain media.</li>
+                  <li>Costly – an institution must purchase additional data storage media at each migration.</li>
+               </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Cloud Migration and Cloud Service Providers</h2>
+               <ul>
+                  <li>Is the process of moving data, applications or other business elements from an organization’s onsite computers to the cloud, or moving them from one cloud environment to another.</li>
+                  <li>The process of transitioning to a different cloud provider is known as <b>cloud service migration</b></li>
+                  <li>A cloud provider is a company that offers some component of cloud computing – typically infrastructure as a service, software as a service or platform as a service to other businesses or individuals. Cloud providers are sometimes referred to as <b>cloud service providers</b></li>
+               </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Examples of Cloud Service Providers</h2>
+               <ul>
+                  <li>Amazon Web Services</li>
+                  <li>Microsoft Azure</li>
+                  <li>IBM Cloud</li>
+                  <li>Oracle Cloud</li>
+                  <li>OpenStack</li>
+                  <li>RackSpace</li>
+               </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+
+</body>
+
+
+<!-- reviews section ends -->
+
+<!-- couter section ends -->
+
+<!-- about section starts  -->
+<br><br>
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section>
+
+      <div class="credit">&copy; copyright @ 2022 by <span>PCNL FTA-DBMS</span> | All rights reserved!</div>
+
+   </section>
+
+</footer>
+
+<!-- footer section ends -->
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

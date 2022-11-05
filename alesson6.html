@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FTA-DBMS App</title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="advanced.html" class="logo" ><img src="images/back.png"  style="width:30px;height:30px;"></a>
+
+      
+   </section>
+
+</header>
+
+<!-- header section ends -->
+<br><br><br>
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+   <div class="row">
+
+      <div class="content">
+        <h3>Lesson 6<span><br>Normalization of Database Tables</span></h3>
+      </div>
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Objectives</h2>
+            <ul>
+               <li>In this chapter, students will learn:
+                  <ul>
+                     <li>What normalization is and what role it plays in the database design process</li>
+                     <li>About the normal forms 1NF, 2NF, 3NF, BCNF, and 4NF</li>
+                     <li>How normal forms can be transformed from lower normal forms to higher normal forms</li>
+                     <li>That normalization and ER modeling are used concurrently to produce a good database design</li>
+                     <li>That some situations require denormalization to generate information efficiently</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Database Tables and Normalization</h2>
+            <ul>
+               <li>Normalization
+                  <ul>
+                     <li>Process for evaluating and correcting table structures to minimize data redundancies
+                        <ul>
+                           <li>Reduces data anomalies</li>
+                        </ul></li>
+                     <li>Series of stages called normal forms: 
+                        <ul>
+                           <li>First normal form (1NF)</li>
+                           <li>Second normal form (2NF)</li>
+                           <li>Third normal form (3NF)</li>
+                        </ul></li>
+                     <li>2NF is better than 1NF; 3NF is better than 2NF</li>
+                     <li>For most business database design purposes, 3NF is as high as needed in normalization</li>
+                     <li>Highest level of normalization is not always most desirable</li>
+                  </ul></li>
+               <li>Denormalization produces a lower normal form
+                  <ul>
+                     <li>Increased performance but greater data redundancy</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>The Need for Normalization</h2>
+            <ul>
+               <li>Example: company that manages building projects (Figure 6.1)
+                  <ul>
+                     <li>Each project has its own project number, name, assigned employees, etc.</li>
+                     <li>Each employee has an employee number, name, job class</li>
+                     <li>Charges its clients by billing hours spent on each contract</li>
+                     <li>Hourly billing rate is dependent on employee’s position</li>
+                     <li>Total charge is a derived attribute and not stored in the table</li>
+                     <li>Periodically, report is generated that contains information such as displayed in Table 6.1</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <img src="images/example190.png">   
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <img src="images/example191.png">   
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>The Need for Normalization</h2>
+            <ul>
+               <li>Structure of data set in Figure 6.1 does not handle data very well</li>
+               <li>Table structure appears to work; report is generated with ease</li>
+               <li>Report may yield different results depending on what data anomaly has occurred
+                  <ul>
+                     <li>Employee can be assigned to more than one project but each project includes only a single occurrence of any one employee</li>
+                  </ul></li>
+               <li>Relational database environment is suited to help designer avoid data integrity problems</li>
+               <li>PROJECT_NUM, either a PK or part of a PK, contains NULLS</li>
+               <li>JOB_CLASS values could be abbreviated differently </li>
+               <li>Each time an employee is assigned to a project, all employee information is duplicated</li>
+               <li>Update anomalies – Modifying JOB_CLASS for employee 105 requires alterations in two records</li>
+               <li>Insertion anomalies – to insert a new employee who has not been assigned to a project requires a phantom project </li>
+               <li>Deletion anomalies – If a project has only one employee associated with it and that employee leaves, a phantom employee must be created</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>The Normalization Process</h2>
+            <ul>
+               <li>Each table represents a single subject</li>
+               <li>No data item will be unnecessarily stored in more than one table</li>
+               <li>All nonprime attributes in a table are dependent on the primary key</li>
+               <li>Each table is void of insertion, update, and deletion anomalies</li>
+               <img src="images/example192.png">
+               <li>Objective of normalization is to ensure that all tables are in at least 3NF</li>
+               <li>Higher forms are not likely to be encountered in business environment</li>
+               <li>Normalization works one relation at a time</li>
+               <li>Progressively breaks table into new set of relations based on identified dependencies</li>
+                <img src="images/example193.png">
+               <li>Partial dependency
+                  <ul>
+                     <li>Exists when there is a functional dependence in which the determinant is only part of the primary key</li>
+                     <li>If (A,B) &#8594; (C,D); B &#8594; C and (A,B) is the PK
+                        <ul>
+                           <li>B &#8594; C is a partial dependency because only part of the PK, B, is needed to determine the value of C</li>
+                        </ul></li>
+                  </ul></li>
+               <li>Transitive dependency 
+                  <ul>
+                     <li>Exists when there are functional dependencies such that X &#8594; Y, Y &#8594; Z, and X is the primary key
+                        <ul>
+                           <li>X &#8594; Z is a transitive dependency because X determines the value of Z via Y</li>
+                           <li>The existence of a functional dependence among non-prime attributes is a sign of transitive dependency</li>
+                        </ul></li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Conversion to First Normal Form</h2>
+            <ul>
+               <li>Repeating group
+                  <ul>
+                     <li>Group of multiple entries of same type can exist for any single key attribute occurrence</li>
+                  </ul></li>
+               <li>Relational table must not contain repeating groups</li>
+               <li>Normalizing table structure will reduce data redundancies</li>
+               <li>Normalization is three-step procedure</li>
+               <li>Step 1: Eliminate the Repeating Groups 
+                  <ul>
+                     <li>Eliminate nulls: each repeating group attribute contains an appropriate data value</li>
+                  </ul></li>
+               <li>Step 2: Identify the Primary Key 
+                  <ul>
+                     <li>Must uniquely identify attribute value</li>
+                     <li>New key must be composed</li>
+                  </ul></li>
+               <li>Step 3: Identify All Dependencies 
+                  <ul>
+                     <li>Dependencies are depicted with a diagram</li>
+                  </ul></li>
+                  <img src="images/example194.png">
+               <li>Dependency diagram: 
+                  <ul>
+                     <li>Depicts all dependencies found within given table structure</li>
+                     <li>Helpful in getting bird’s-eye view of all relationships among table’s attributes</li>
+                     <li>Makes it less likely that you will overlook an important dependency</li>
+                     <li>The arrows above the attributes indicate desirable dependencies (i.e., based on the PK)</li>
+                     <li>The arrows below the attributes indicate less desirable dependencies (partial and transitive)</li>
+                  </ul></li>
+                  <img src="images/example195.png">
+               <li>First normal form describes tabular format:
+                  <ul>
+                     <li>All key attributes are defined</li>
+                     <li>No repeating groups in the table</li>
+                     <li>All attributes are dependent on primary key</li>
+                  </ul></li>
+               <li>All relational tables satisfy 1NF requirements</li>
+               <li>Some tables contain partial dependencies
+                  <ul>
+                     <li>Dependencies are based on part of the primary key</li>
+                     <li>Should be used with caution</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Conversion to Second Normal Form</h2>
+            <ul>
+               <li>Conversion to 2NF occurs only when the 1NF has a composite key
+                  <ul>
+                     <li>If the 1NF key is a single attribute, then the table is automatically in 2NF</li>
+                  </ul></li>
+               <li>Step 1: Make New Tables to Eliminate Partial Dependencies
+                  <ul>
+                     <li>For each component of the PK that acts as a determinant in a partial dependency, create a new table with a copy of that component as the PK</li>
+                     <li>These components also remain in the original table in order to serve as FKs to the original table</li>
+                     <li>Write each key component on a separate line; then write the original composite key on the last line. Each component will become the key in a new table
+                        <ul style="list-style-type: none;">
+                           <b><li>PROJ_NUM</li>
+                              <li>EMP_NUM</li>
+                              <li>PROJ_NUM EMP_NUM </li></b>
+                        </ul></li>
+                  </ul></li>
+               <li>Step 2: Reassign Corresponding Dependent Attributes 
+                  <ul>
+                     <li>The dependencies for the original key components are found by examining the arrows below the dependency diagram in Fig 6.3</li>
+                     <li>The attributes in a partial dependency are removed from the original table and placed in the new table with the dependency’s determinant</li>
+                     <li>Any attributes that are not dependent in a partial dependency remain in the original table</li>
+                     <li>At this point, most anomalies have been eliminated
+                        <ul style="list-style-type: none;">
+                           <li>PROJECT(<b>PROJ_NUM,</b>PROJ_NAME)</li>
+                           <li>EMPLOYEE(<b>EMP_NUM,</b>EMP_NAME,JOB_CLASS, CHG_HOUR)</li>
+                           <li>ASSIGNMENT(<b>PROJ_NUM,EMP_NUM,</b> ASSIGN_HOURS)</li>
+                        </ul></li>
+                  </ul></li>
+               <img src="images/example196.png">
+               <li>Table is in second normal form (2NF) when:
+                  <ul>
+                     <li>It is in 1NF and </li>
+                     <li>It includes no partial dependencies:
+                        <ul>
+                           <li>No attribute is dependent on only portion of primary key</li>
+                        </ul></li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Conversion to Third Normal Form</h2>
+            <ul>
+               <li>Step 1: Make New Tables to Eliminate Transitive Dependencies 
+                  <ul>
+                     <li>For every transitive dependency, write its determinant as PK for new table (JOB_CLASS)
+                        <ul>
+                           <li>Determinant: any attribute whose value determines other values within a row</li>
+                        </ul></li>
+                     <li>The determinant should remain in the original table to serve as a FK</li>
+                  </ul></li>
+               <li>Step 2: Reassign Corresponding Dependent Attributes 
+                  <ul>
+                     <li>Identify attributes dependent on each determinant identified in Step 1
+                        <ul>
+                           <li>Identify dependency</li>
+                        </ul></li>
+                     <li>Name table to reflect its contents and function
+                        <ul style="list-style-type: none;">
+                           <li>PROJECT(<b>PROJ_NUM,</b>PROJ_NAME)</li>
+                           <li>ASSIGNMENT(<b>PROJ_NUM,EMP_NUM,</b> ASSIGN_HOURS)</li>
+                           <li>EMPLOYEE(<b>EMP_NUM,</b>EMP_NAME,JOB_CLASS)</li>
+                           <li>JOB(<b>JOB_CLASS,</b> CHG_HOUR)</li>
+                        </ul></li>
+                        <img src="images/example197.png">
+                  </ul></li>
+               <li>A table is in third normal form (3NF) when both of the following are true:
+                  <ul>
+                     <li>It is in 2NF</li>
+                     <li>It contains no transitive dependencies</li>
+                  </ul></li></ul>
+               <p>1NF->2NF – remove partial dependencies</p>
+               <p>2NF->3NF – remove transitive dependencies</p>
+               <ul><li>In both cases, the answer is create a new table
+                  <ul>
+                     <li>The determinant of the problem dependency remains in the original table and is placed as the PK of the new table</li>
+                     <li>The dependents of the problem dependency are removed from the original table and placed as nonprime attributes in the new table</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Improving the Design</h2>
+            <ul>
+               <li>Table structures should be cleaned up to eliminate initial partial and transitive dependencies</li>
+               <li>Normalization cannot, by itself, be relied on to make good designs</li>
+               <li>Valuable because it helps eliminate data redundancies</li>
+               <li>If a table has multiple candidate keys and one is a composite key, there can be partial dependencies even when the PK is a single attribute
+                  <ul>
+                     <li>Resolve in 3NF as a transitive dependency</li>
+                  </ul></li>
+               <li>Issues to address, in order, to produce a good normalized set of tables: 
+                  <ul>
+                     <li>Evaluate PK Assignments
+                        <ul>
+                           <li>Use JOB_CODE as PK for JOB table rather than JOB_CLASS to avoid data-entry errors when used as a FK in EMPLOYEE (DB Designer /Database Designer)</li>
+                           <li>JOB (<b>JOB_CODE,</b> JOB_CLASS,CHG_HOUR)</li>
+                           <li>Why is JOB_CLASS-->CHG_HOUR not a transitive dependency? (Because  JOB_CLASS is a candidate key)</li>
+                        </ul></li>
+                     <li>Evaluate Naming Conventions
+                        <ul>
+                           <li>CHG_HOUR should be JOB_CHG_HOUR</li>
+                           <li>JOB_DESCRIPTION is a better than JOB_CLASS </li>
+                        </ul></li>
+                     <li>Refine Attribute Atomicity
+                        <ul>
+                           <li>Atomic attribute – one that can not be further subdivided
+                              <li>EMP_NAME is not atomic</li></li>
+                        </ul></li>
+                     <li>Identify New Attributes
+                        <ul>
+                           <li>YTD gross salary, social security payments, hire date</li>
+                        </ul></li>
+                     <li>Identify New Relationships
+                        <ul>
+                           <li>To track the manager of each project, put EMP_NUM as a FK in PROJECT</li>
+                        </ul></li>
+                     <li>Refine Primary Keys as Required for Data Granularity
+                        <ul>
+                           <li>What does ASSIGN_HOURS represent ? Yearly total hours, weekly, daily?</li>
+                           <li>If need multiple daily entries for project and emp number, then use a surrogate key ASSIGN_NUM to avoid duplication of the PK key EMP_NUM, PROJ_NUM, ASSIGN_DATE</li>
+                        </ul></li>
+                     <li>Maintain Historical Accuracy
+                        <ul>
+                           <li>An employee’s job charge could change over the lifetime of a project. In order to reconstruct the charges to a project, another field with the job charge and date active is required</li>
+                        </ul></li>
+                     <li>Evaluate Using Derived Attributes
+                        <ul>
+                           <li>Store rather than derive the charge if it will speed up reporting </li>
+                        </ul></li>
+                        <img src="images/example198.png">
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Surrogate Key Considerations</h2>
+            <ul>
+               <li>When primary key is considered to be unsuitable, designers use surrogate keys</li>
+               <li>Data entries in Table 6.4 are inappropriate because they duplicate existing records
+                  <ul>
+                     <li>No violation of entity or referential integrity</li>
+                  </ul></li>
+                  <img src="images/example199.png">
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Higher-Level Normal Forms</h2>
+            <ul>
+               <li>Tables in 3NF perform suitably in business transactional databases</li>
+               <li>Higher-order normal forms are useful on occasion</li>
+               <li>Two special cases of 3NF:
+                  <ul>
+                     <li>Boyce-Codd normal form (BCNF)</li>
+                     <li>Fourth normal form (4NF)</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>The Boyce-Codd Normal Form</h2>
+            <ul>
+               <li>Every determinant in table is a candidate key
+                  <ul>
+                     <li>Has same characteristics as primary key, but for some reason, not chosen to be primary key</li>
+                  </ul></li>
+               <li>When table contains only one candidate key, the 3NF and the BCNF are equivalent</li>
+               <li>BCNF can be violated only when table contains more than one candidate key</li>
+               <li>Most designers consider the BCNF as a special case of 3NF</li>
+               <li>Table is in 3NF when it is in 2NF and there are no transitive dependencies</li>
+               <li>Table can be in 3NF and fail to meet BCNF
+                  <ul>
+                     <li>Table can be in 3NF and fail to meet BCNF</li>
+                     <li>A nonkey attribute is the determinant of a key attribute</li>
+                  </ul></li>
+               <img src="images/example200.png"><br>
+               <img src="images/example201.png"><br>
+               <img src="images/example202.png">
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Fourth Normal Form (4NF)</h2>
+            <ul>
+               <li>Table is in fourth normal form (4NF) when both of the following are true:
+                  <ul>
+                     <li>It is in 3NF </li>
+                     <li>No multiple sets of multivalued dependencies</li>
+                  </ul></li>
+               <li>4NF is largely academic if tables conform to following two rules:
+                  <ul>
+                     <li>All attributes dependent on primary key, independent of each other</li>
+                     <li>No row contains two or more multivalued facts about an entity</li>
+                     <img src="images/example203.png"> <br>
+                     <img src="images/example204.png">
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Normalization and Database Design</h2>
+            <ul>
+               <li>Normalization should be part of the design process</li>
+               <li>Make sure that proposed entities meet required normal form before table structures are created</li>
+               <li>Many real-world databases have been improperly designed or burdened with anomalies</li>
+               <li>You may be asked to redesign and modify existing databases</li>
+               <li>ER diagram 
+                  <ul>
+                     <li>Identify relevant entities, their attributes, and their relationships</li>
+                     <li>Identify additional entities and attributes</li>
+                  </ul></li>
+               <li>Normalization procedures 
+                  <ul>
+                     <li>Focus on characteristics of specific entities</li>
+                     <li>Micro view of entities within ER diagram</li>
+                  </ul></li>
+               <li>Difficult to separate normalization process from ER modeling process</li>
+               <li>Given the following business rules:
+                  <ul>
+                     <li>The company manages many projects</li>
+                     <li>Each project requires the services of many employees</li>
+                     <li>An employee may be assigned to several projects</li>
+                     <li>Some employees are not assigned to a project and perform non-project related duties. Some employees are part of a labor pool and shared by all project teams</li>
+                     <li>Each employee has a single primary job classification which determines the hourly billing rate]</li>
+                     <li>Many employees can have the same job classification.</li>
+                  </ul></li>
+               <li>We initially define the following entities
+                  <ul style="list-style-type: none;">
+                     <li>PROJECT(<b>PROJ_NUM,</b>PROJ_NAME)</li>
+                     <li>EMPLOYEE(<b>EMP_NUM,</b>EMP_LNAME,EMP_FNAME, EMP_INITIAL,JOB_DESCRIPTION, JOB_CHG_HOUR)</li>
+                  </ul></li>
+               <li>PROJECT is in 3NF and needs no modification</li>
+               <li>EMPLOYEE contains a transitive dependency so we now have
+               <ul style="list-style-type: none;">
+                     <li>PROJECT(<b>PROJ_NUM,</b>PROJ_NAME)</li>
+                     <li>EMPLOYEE(<b>EMP_NUM,</b>EMPLOYEE(EMP_NUM, EMP_LNAME, EMP_FNAME, EMP_INITIAL, JOB_CODE)</li>
+                     <li>JOB(JOB_CODE,JOB_DESCRIPTION,JOB_CHG_HOUR)</li>
+                  </ul></li>
+               <li>EMPLOYEE contains a transitive dependency so we now have
+                  <ul style="list-style-type: none;">
+                     <li>PROJECT(<b>PROJ_NUM,</b>PROJ_NAME)</li>
+                     <li>EMPLOYEE(<b>EMP_NUM,</b>EMP_LNAME,EMP_FNAME, EMP_INITIAL, JOB_CODE)</li>
+                     <li>JOB(<b>JOB_CODE,</b>JOB_DESCRIPTION,JOB_CHG_HOUR)</li>
+                     <img src="images/example205.png">
+                  </ul></li>
+               <li>To represent the M:N relationship between EMPLOYEE and PROJECT, we could try two 1:M realtionships
+                  <ul>
+                     <li>An employee can be assigned to many projects</li>
+                     <li>Each project can have many employees assigned to it
+                        <img src="images/example206.png"></li>
+                  </ul></li>
+               <li>As this M:N can not be implemented, we include the ASSIGNMENT entity to track the assignment of employees in projects</li>
+               <img src="images/example207.png">
+               <li>ASSIGN_HOURS is assigned to ASSIGNMENT</li>
+               <li>A  “manages” relationship is added to in order to keep detailed information about each project’s manager</li>
+               <li>Some additional attributes are added to maintain additional information
+                  <ul><br>
+                     <li>PROJECT(<b>PROJ_NUM,</b>PROJ_NAME,EMP_NUM)</li><br>
+                     <li>EMPLOYEE(<b>EMP_NUM,</b>EMP_LNAME,EMP_FNAME,  EMP_INITIAL, EMP_HIREDATE,JOB_CODE)</li><br>
+                     <li>JOB(<b>JOB_CODE,</b>JOB_DESCRIPTION,JOB_CHG_HOUR)</li><br>
+                     <li>ASSIGNMENT(<b>ASSIGN_NUM,</b>ASSIGN_DATE, PROJ_NUM,EMP_NUM,ASSIGN_HOURS, ASSIGN_CHG_HOUR,ASSIGN_CHARGE)</li>
+                  </ul></li></
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <img src="images/example208.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Denormalization</h2>
+            <ul>
+               <li>Creation of normalized relations is important database design goal</li>
+               <li>Processing requirements should also be a goal</li>
+               <li>If tables are decomposed to conform to normalization requirements:
+                  <ul>
+                     <li>Number of database tables expands</li>
+                  </ul></li>
+               <li>Joining the larger number of tables reduces system speed</li>
+               <li>Conflicts are often resolved through compromises that may include denormalization</li>
+               <li>Defects of unnormalized tables:
+                  <ul>
+                     <li>Data updates are less efficient because tables are larger</li>
+                     <li>Indexing is more cumbersome as there are more fields per table</li>
+                     <li>No simple strategies for creating virtual tables known as views</li>
+                     <img src="images/example209.png">
+                  </ul></li>
+               <li>In order to generate the report below, a temporary denormalized table is used since the last four semesters of each faculty member could be different due to sabbatical, leave, start date, etc
+                  <img src="images/example210.png"></li>
+               <li>EVALDATA is the master data table which is normalized</li>
+               <li>FACHIST is created via a series of queries in order to produce the desired report
+                  <img src="images/example211.png"></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Data-Modeling Checklist</h2>
+            <ul>
+               <li>Data modeling translates specific real-world environment into data model
+                  <ul>
+                     <li>Represents real-world data, users, processes, interactions</li>
+                  </ul></li>
+               <li>Data-modeling checklist helps ensure that data-modeling tasks are successfully performed</li>
+               <li>Based on concepts and tools learned in Part II</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <img src="images/example212.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+</body>
+
+
+<!-- reviews section ends -->
+
+<!-- couter section ends -->
+
+<!-- about section starts  -->
+<br><br>
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section>
+
+      <div class="credit">&copy; copyright @ 2022 by <span>PCNL FTA-DBMS</span> | All rights reserved!</div>
+
+   </section>
+
+</footer>
+
+<!-- footer section ends -->
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

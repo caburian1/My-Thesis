@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FTA-DBMS App</title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="fundamentals.html" class="logo" ><img src="images/back.png"  style="width:30px;height:30px;"></a>
+
+      
+   </section>
+
+</header>
+
+<!-- header section ends -->
+<br><br><br>
+<!-- home section starts  -->
+
+<section class="home" id="home">
+   <div class="row">
+      <div class="content">
+        <h3>Lesson 5<span><br>SQL Query Language (2)</span></h3>
+      </div>
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Topics</h2>
+            <ul>
+               <li>Update Query</li>
+               <li>Delete Query
+                  <ul>
+                     <li>Integrity Constraint</li>
+                     <li>Cascae Deletes</li>
+                     <li>Deleting a Table</li>
+                  </ul></li>
+               <li>Join in Queries</li>
+               <li>Table variables</li>
+               <li>More Options in Select Quiries
+                  <ul>
+                     <li>Like Clause</li>
+                     <li>Distinct Queries</li>
+                     <li>Ordering</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Update Query</h2>
+            <ul>
+               <li>Update query isn used for changing the values of attributes.</li>
+               <li><i><b>Update</b></i> Table_name
+                  <br>Set Attribute_name1 = Value1,
+                  <br> &nbsp; &nbsp; &nbsp; Attribute_name2 = Value2,
+                  <br> &nbsp; &nbsp; &nbsp; ......
+                  <br><i>Where</i> condition</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Update Query Example</h2>
+            <ul>
+               <li>Raise the salary of any employee by 20% if the salary is less than or equal to 40
+                  <br>
+                  <br>update Employee
+                  <br> set Salary 8 1.2
+                  <br>where Salary <=40
+                  </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Update Query Example</h2>
+            <img src="images/example58.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Update Query Order</h2>
+            <ul>
+               <li>Update Query is set oriented. Therefore the order of the queries is important.</li>
+               <li>For example the following order gives some employees a double raise
+                  <br>
+                  <br>update Employee
+                  <br> set Salary 8 1.2
+                  <br>where Salary <=40
+                  <br>
+                  <br>update Employee
+                  <br> set Salary 8 1.15
+                  <br>where Salary <=40
+                  </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Delete Query</h2>
+            <ul>
+               <li>To delete tuples <b><i>Delte</i></b> query is used.</li><br>
+               <li><b><i>Delete from</i></b> Table_name
+                  <br><b><i>Where</i></b> condition</li><br>
+               <li><b><i>Delete</i></b> query without <b><i>Where</i></b> deletes all tuples. (Table schema is preserved)</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Delete Query Example</h2>
+           <ul>
+              <li>Delete From Employee
+               <br>Where City ='London'</li>
+               <img src="images/example59.png">
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Integrity Constraint</h2>
+           <ul>
+              <li>If a table constraints a foreign key attribute, the value of the foreign key must refer to a valid record in the secong table. This constrain is called <b><i>Integrity Constraint</i></b></li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Sample Database</h2>
+           <img src="images/example60.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Integrity Constraint In Sample Database</h2>
+            <ul>
+               <li>DeptCode in EMPLOYEE table is a foreign key referring to DeptCode in DEPARTMENT table</li>
+               <br>
+               <li>If a department is deleted, its employees will not have a valid department</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Integrity Constraint Violation Example</h2>
+            <ul style="list-style-type: none;">
+               <li>Delete From Department</li>
+               <li>Where DepartmentName = 'Administration'
+                  <br>
+                  <ul style="list-style-type: none;">
+                     <li>After this query, Mary Brown's department is invaid. The database integrity is violated after this query.</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Solution to Integrity Violation: Cascade Delete</h2>
+            <ul>
+               <li>To preserve database integrity we should either
+                  <ul>
+                     <li>Not allow deleting records with references from other tables.</li>
+                     <li>Delete records in other tables which are referring to this record. This is called cascade delete</li>
+                     <li>Sytax: <b><i>Delete From</i></b> TableName
+                        <ul style="list-style-type: none;">
+                           <li> &nbsp; &nbsp; where condition <b><i>Cascade</i></b></li>
+                        </ul></li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Cascade Delete Example</h2>
+            <img src="images/example61.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Deleting a Table</h2>
+            <ul>
+               <li>A table including its schema and records can be deleted using <b><i>Drop</i></b> command</li>
+               <li>Syntax: <b><i>DropTable</i></b> TableName
+                  <ul>
+                     <li>e.g. Drop Table Cars</li>
+                  </ul></li>
+               <li>If Cascade is used with Drop command, all references to the table will be removed</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Deleting Tables: Example</h2>
+            <ul>
+               <li>DropTable &nbsp; Departmet Cascade</li>
+            </ul>
+            <img src="images/example62.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Join in Queries</h2>
+            <ul>
+               <li>Join can be used i  SQL queries</li>
+               <li>Syntax
+                  <ul style="list-style-type: none;">
+                     <li><b><i>Select</i></b> AttributesList</li>
+                     <li><b><i>From</i></b> Table1 [JoinType] <b><i>Join</i></b> Table2 <b><i>On</i></b> JoinCond</li>
+                     <li><b><i>Where</i></b> Condition</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Example: Natural Join</h2>
+            <img src="images/example63.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Join Example</h2>
+            <ul>
+               <li><b>Select</b> FirstName, Surname, Department.City</li>
+               <li><b>From</b> Employee <b>join</b> Department <b>on</b> Dept = DeptName</li>
+            <img src="images/example64.png">
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Left Join, Right Join, Full Join</h2>
+           <ul>
+              <li>Use Left, Right, or Full as join type to have a left,right, or full join</li>
+              <li>e.g.
+               <ul style="list-style-type: none;">
+                  <li><b><i>Select</i></b> *</li>
+                  <li><b><i>From</i></b> Table1 <b><i>Left Join</i></b> Table2 <b><i>on</i></b> Att1=Att2</li>
+                  <li><b><i>Where</i></b> Table1.Att3 > 100</li>
+               </ul></li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Left Join Example</h2>
+           <ul style="list-style-type: none;">
+              <li><b>Select FirstName, Surname, Driver.DriverID,</b></li>
+              <li> &nbsp; &nbsp; &nbsp; CarRegNo, Make, Model</li>
+              <li><b>From</b> Driver <b>left join</b> Automobile <b>on</b></li>
+              <li> &nbsp; &nbsp; &nbsp; (Driver.DriverID = Automobile.DriverID)</li>
+              <img src="images/example65.png">
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>The Result of Left Join Example</h2>
+            <img src="images/example66.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Right Join Example</h2>
+            <ul style="list-style-type: none;">
+               <li><b>Select</b> FirstName, Surname, Driver.DriverID,</li>
+               <li> &nbsp; &nbsp; &nbsp; CarRegNo, Make, Model</li>
+               <li><b>From</b> Driver <b>right join</b> Automobile <b>on</b></li>
+               <li> &nbsp; &nbsp; &nbsp; (Driver.DriverID = Automobile.DriverID)</li>
+               <img src="images/example67.png">
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Full Join Example</h2>
+            <ul style="list-style-type: none;">
+               <li><b>Select</b> FirstName, Surname, Driver.DriverID,</li>
+               <li> &nbsp; &nbsp; &nbsp; CarRegNo, Make, Model</li>
+               <li><b>From</b> Driver <b>full join</b> Automobile <b>on</b></li>
+               <li> &nbsp; &nbsp; &nbsp; (Driver.DriverID = Automobile.DriverID)</li>
+               <img src="images/example68.png">
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Table Variables</h2>
+            <ul>
+               <li>Table variables correspond to the remaining operator <b><i>p</i></b> of relational algebra</li>
+               <li>e.g. Find all the same surname (but different first names) employees:
+                  <br><b><i>Select</i></b> E1.FirstName, E1.Surname
+                  <br><b><i>From</i></b>Employee E1, Employee E2
+                  <br><b><i>Where</i></b> E1.Surname = E2.Surname <b><i>And </i></b>
+                  <br>E1.FirstName < > E2.FirstName</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Query Results</h2>
+            <img src="images/example69.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Like Clause</h2>
+            <ul>
+               <li>Like is used in condition expressions when a pattern is used instead of an exact value.</li>
+               <li> _ in like represents one character</li>
+               <li>% in like represents any number of characters</li>
+               <li>e.g. A%A  matches all strings starting and ending with character ‘A’ such as ‘ANKARA</li>
+               <li>e.g. _an matches all 3 letter strings ending with 'an' such as 'man' or 'can'</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Like Clause Example</h2>
+            <ul>
+               <li>Find the employees with surnames that have 'r' as the second letter and 'n' as the last letter:
+
+                  <br>select *
+                  <br>from Employee
+                  <br>where Surname like '_r%n'</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Distinct Option in Queries</h2>
+            <ul>
+              <li>In SQL, tables may have identical rows if no primary key is defined</li>
+              <li>Duplicate can be removed from a query using the keyword <b><i>distinct</i></b></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Query with Distinct Keyword</h2>
+           <img src="images/example70.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Ordering</h2>
+           <ul>
+              <li>The <b><i>order by </i></b>clause, at the end of the query, orders the rows of the result.</li>
+              <li>Syntax:
+               <br><i><b>order by</b> Attribute [ asc | desc ]</i></li><br>
+               <li>More than one attribute can be used in <b><i>order by</i></b> clause</li>
+           </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Ordering Example</h2>
+            <ul>
+               <li>Extract all records from the Automobile table in descending order of make and model:
+                  <br>Select *
+                  <br>From Automobile
+                  <br>Order by Make desc, Model desc</li>
+            <img src="images/example71.png">
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Summary</h2>
+            <ul>
+               <li>SQL queries are also used for updating records, deleting records or deleting tables.</li>
+               <li>In deleting records or tables, the integrity of the database should be preserved.</li>
+               <li>Queries can be written by joining tables</li>
+               <li>The result of a query can be put in order of an attribute and the repeated rows can be removed.</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+</body>
+
+
+<!-- reviews section ends -->
+
+<!-- couter section ends -->
+
+<!-- about section starts  -->
+<br><br>
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section>
+
+      <div class="credit">&copy; copyright @ 2022 by <span>PCNL FTA-DBMS</span> | All rights reserved!</div>
+
+   </section>
+
+</footer>
+
+<!-- footer section ends -->
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

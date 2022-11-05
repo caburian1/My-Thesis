@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FTA-DBMS App</title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="fundamentals.html" class="logo" ><img src="images/back.png"  style="width:30px;height:30px;"></a>
+
+      
+   </section>
+
+</header>
+
+<!-- header section ends -->
+<br><br><br>
+<!-- home section starts  -->
+
+<section class="home" id="home">
+   <div class="row">
+      <div class="content">
+        <h3>Lesson 3.1<span><br>Queries and Relational Algebra</span></h3>
+      </div>
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Topics</h2>
+            <ul>
+               <li>Definitions
+                  <ul>
+                     <li>Queries and QueryTypes</li>
+                     <li>Query Languages</li>
+                     <li>Relational Algebra</li>
+                  </ul></li>
+               <li>Relational Algebra Procedures
+                  <ul>
+                     <li>Union, Intersection, Difference</li>
+                     <li>Renaming</li>
+                     <li>Selection</li>
+                     <li>Projection</li>
+                     <li>Join (natural join, outer join, equi join)</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Operations on Databases</h2>
+            <ul>
+               <li>Operations on databases:
+                  <ul>
+                     <li>Read queries: read data from the database</li>
+                     <li>Update queries: change the content of the database</li>
+                  </ul></li>
+               <li>Mathematical foundations of these operations can be studied with <b><i>"Relational Algebra"</i></b></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Queries and Query Languages</h2>
+            <ul>
+               <li>Query is a set of operations that take one or some relations(database) as input and return one or some relations(database) as output.</li>
+               <li>Query languages are used for writing queries for databases</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Relational Algebra</h2>
+            <ul>
+               <li>A collection of operators that
+                  <ul>
+                     <li>are defined on relations</li>
+                     <li>produce reations as results</li>
+                     <li>and therefore cacn be combined to form complex expressions</li>
+                  </ul></li>
+               <li>Operators
+                  <ul>
+                     <li>union, intersection, difference</li>
+                     <li>renaming</li>
+                     <li>selection</li>
+                     <li>projection</li>
+                     <li>join (natural join, outer join, equi join)</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Union, Intersection, and Difference</h2>
+            <ul>
+               <li>Relations are sets, so we can apply set operators</li>
+               <li>However, we want the results to be relations</li>
+               <li>Therefore: it is meaningful to apply union, intersection, difference only to relations defined over the same attributes(relations that have the same schema)</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Union, Intersection, and Difference</h2>
+            <ul>
+               <li>Relations are sets, so we can apply set operators</li>
+               <li>However, we want the results to be relations</li>
+               <li>Therefore: it is meaningful to apply union, intersection, difference only to relations defined over the same attributes(relations that have the same schema)</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Union</h2>
+            <img src="images/example30.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Intersection</h2>
+            <img src="images/example31.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Difference</h2>
+            <img src="images/example32.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>A meaningful but Impossible Union</h2>
+            <img src="images/example33.png">
+            <ul>
+               <li>the problem: Father and Mother are different attribute names, but both represent a "Parent"</li>
+               <li>the solution: rename the attributes</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Renaming</h2>
+            <ul>
+               <li>unary opertor</li>
+               <li>changes attributes names without changing values</li>
+               <li>notation: <i>p<sub>j </sub><sub>&nbsp; x</sub></sub><sup> (r)</sup></i>
+                  <ul>
+                     <li>Example: <i>p<sub>parent </sub><sub>&nbsp; Jather</sub></sub><sup> (PaternitJ)</sup></i></li>
+                  </ul></li>
+               <li>Two or more attributes can be rename with one expression
+               <ul>
+                     <li>Example: <i>p<sub>Location,PaJ </sub><sub>&nbsp; Branch,SalarJ</sub></sub><sup> (EmploJee)</sup></i></li>
+                  </ul></</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Renaming and Union</h2>
+            <img src="images/example35.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Renaming and Union with More Attributes</h2>
+            <img src="images/example36.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Selection</h2>
+            <ul>
+               <li>Selection operation produces a relation with the same schema as its operand.</li>
+               <li>The resulted (input) relation is a subset of the operand (output) relation.</li>
+               <li>Notation: <b class="bol">σ</b><sub>F</sub> (r)
+                  <ul>
+                     <li>r is the relation</li>
+                     <li>F is the condition</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Selection Example 1</h2>
+            <img src="images/example37.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Selection Example 2</h2>
+            <img src="images/example38.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Projection</h2>
+            <ul>
+               <li>Projection operation produces a relation with a sub-set of the attributes of its operand</li>
+               <li>All tuples from the operand will be in the resulted relation</li>
+               <br><li>Notation: π<sub>Y</sub> (r)
+                  <ul>
+                     <li>r is  relation</li>
+                     <li>Y is the list of selected attributes</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Projection</h2>
+            <ul>
+               <li>Projection operation produces a relation with a sub-set of the attributes of its operand</li>
+               <li>All tuples from the operand will be in the resulted relation</li>
+               <br><li>Notation: π<sub>Y</sub> (r)
+                  <ul>
+                     <li>r is  relation</li>
+                     <li>Y is the list of selected attributes</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Projection Example 1</h2>
+            <img src="images/example39.png   ">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Projection Example 2</h2>
+            <img src="images/example40.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Cardinality of Projection</h2>
+            <ul>
+               <li>The result of a projection contains at most as many tuples as the operand</li>
+               <li>It can contain fewer tuples, if some tuples are the same.</li>
+               <li>π<sub>Y</sub>(r) contains as many tuples as <b><i>r</i></b> is a key for <b><i>r</i></b></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Cardinality of Projection: Example</h2>
+            <img src="images/example41.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Join</h2>
+            <ul>
+               <li>Join operation uses the connection between the relations to combine(join) them.</li>
+               <li>Notation &#8904;</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Natural Join</h2>
+            <ul>
+               <li>Joins tow tuples of relations r1 and r2 if the values of attributes with the same name are equal.
+               </li></ul>
+               <img src="images/example42.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Natural Join Example 1</h2>
+               <img src="images/example43.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Natural Join Example 2</h2>
+               <img src="images/example44.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Incomplete Natural Join</h2>
+               <ul>
+                  <li>Some tuples from the first relation may have no match in the second relation. Natural join iwll incomplete in this case.</li>
+               </ul>
+               <img src="images/example45.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Empty Natural Join</h2>
+               <ul>
+                  <li>If no tuple of the first relation matches a tuple from the second relation, the natural join will be empty.</li>
+               </ul>
+               <img src="images/example46.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Outer Join</h2>
+               <ul>
+                  <li>If no match is found for a tuple, we can join it with a <i><b>null tuple.</b></i> This is called outer join.</li>
+                  <li>Left outer join: the <i><b>null tuple</b></i> is from the second relation</li>
+                  <li>Right outer join: the <i><b>null tuple</b></i> is from the first relation</li>
+                  <li>Full outer join: the <i><b>null tuple</b></i> can be from either the first or the second relation</li>
+               </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Outer Join Example</h2>
+            <img src="images/example47.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Equi Join</h2>
+            <ul>
+               <li>Equi join, combines tuples using attributes with different names of they have equal values</li>
+               <br>
+               <li>Notation: &nbsp; r1 &#8904;<sub>x=y</sub> r2
+                  <br>x is an attribute from r1 and y an attribute from r2)</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Equi Join Example</h2>
+            <img src="images/example48.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Queries using Relational Algebra</h2>
+            <ul>
+               <li>Queries can be written using relational algebra operations</li><br>
+               <li>Example: Find the numbers, names and ages of employees earning more than 40 thousand</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Query Example 1</h2>
+            <ul>
+               <li>Data Table: </li>
+               <img src="images/example49.png">
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Query Example</h2>
+               <img src="images/example50.png">
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Summary</h2>
+            <ul>
+               <li>Queries are used to read or update data in a database</li>
+               <li>Queries can be expressed using Relational Algebra Procedures</li>
+               <li> The most important operations in relational algebra are
+                  <ul>
+                     <li>Union, Intersection, Difference, Renaming</li>
+                     <li>Selection, Projection, Join (natural join, outer join, equi join)</li>
+                  </ul></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+
+</body>
+
+
+<!-- reviews section ends -->
+
+<!-- couter section ends -->
+
+<!-- about section starts  -->
+<br><br>
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section>
+
+      <div class="credit">&copy; copyright @ 2022 by <span>PCNL FTA-DBMS</span> | All rights reserved!</div>
+
+   </section>
+
+</footer>
+
+<!-- footer section ends -->
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

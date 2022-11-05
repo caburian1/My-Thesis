@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FTA-DBMS App</title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="advanced.html" class="logo" ><img src="images/back.png"  style="width:30px;height:30px;"></a>
+
+      
+   </section>
+
+</header>
+
+<!-- header section ends -->
+<br><br><br>
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+   <div class="row">
+
+      <div class="content">
+        <h3>Lesson 5<span><br>Database Normalization</span></h3>
+      </div>
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>History</h2>
+            <p> &nbsp; &nbsp; &nbsp; Edgar F. Codd, the inventor of the relational model, introduced the concept of normalization and what we now know as the first normal form (1NF) in 1970. Codd went on to define the second normal form (2nf) and third normal form (3nf) in 1971</p>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Database Normalization</h2>
+            <ul>
+               <li><b>Database normalization</b> is the process of removing redundant data from your tables to improve storage efficiency, data integrity, and scalability.  </li>
+               <li>In the relational model, methods exist for quantifying how efficient a database is. These classifications are called <b>normal forms</b> (or <b>NF</b>), and there are algorithms for converting a given database between them.</li>
+               <li>Normalization generally involves splitting existing tables into multiple ones, which must be re-joined or linked each time a query is issued. </li>
+            </ul>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Normal Form</h2>
+             <p> &nbsp; &nbsp; &nbsp; Edgar F. Codd originally established three normal forms: 1NF, 2NF and 3NF. There are now others that are generally accepted, but 3NF is widely considered to be sufficient for most applications. Most tables when reaching 3NF are also in BCNF (boyce-codd normal form).</p>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Table 1</h2>
+            <img src="images/example183.png">
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Table 1 Problems</h2>
+            <ul>
+               <li>This table is not very efficient with storage.</li>
+               <li>This design does not protect data integrity. </li>
+               <li>Third, this table does not scale well.  </li>
+            </ul>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>First Normal Form</h2>
+            <ul>
+               <li>In our table 1, we have two violations of first normal form: </li>
+               <li>First, we have more than one author field, </li>
+               <li>Second, our subject field contains more than one piece of information. With more than one value in a single field, it would be very difficult to search for all books on a given subject. </li>
+               <li>Table 2</li>
+               <img src="images/example184.png">
+               <li>We now have two rows for a single book. Additionally, we would be violating the second normal form…</li>
+               <li>A better solution to our problem would be to separate the data into separate tables- an author table and a subject table to store our information, removing that information from the book table: </li>
+               <img src="images/example185.png">
+               <li>Each table has a primary key, used for joining tables together when querying the data. A primary key value must be unique with in the table (no two books can have the same ISBN number), and a primary key is also an index, which speeds up data retrieval based on the primary key. </li>
+               <li>Now to define relationships between the tables</li>
+            </ul>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Relationships</h2>
+            <img src="images/example186.png">
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Second Normal Form</h2>
+            <ul>
+               <li>As the first normal form deals with redundancy of data across a horizontal row, second normal form (or 2NF) deals with redundancy of data in vertical columns. </li>
+               <li>As stated earlier, the normal forms are progressive, so to achieve second normal form, the tables must already be in first normal form. </li>
+               <li>The book table will be used for the 2nf example</li>
+               <li>2NF Table:</li>
+               <img src="images/example187.png">
+               <li>Here we have a one-to-many relationship between the book table and the publisher. A book has only one publisher, and a publisher will publish many books. When we have a one-to-many relationship, we place a foreign key in the book table, pointing to the primary key of the publisher table.</li>
+               <li>The other requirement for second normal form is that you cannot have any data in a table with a composite key that does not relate to all portions of the composite key. </li>
+            </ul>
+      </div>
+   </div>
+</section>
+
+<section class="reviews" id="reviews">
+   <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <h2>Third Normal Form</h2>
+            <ul>
+               <li>Third normal form (3NF) requires that there are no functional dependencies of non-key attributes .</li>
+               <li>A table is in 3nf if all of the non-primary key attributes are mutually independent </li>
+               <li>There should not be transitive dependencies </li>
+            </ul>
+      </div>
+   </div>
+</section>
+
+
+
+</body>
+
+
+<!-- reviews section ends -->
+
+<!-- couter section ends -->
+
+<!-- about section starts  -->
+<br><br>
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section>
+
+      <div class="credit">&copy; copyright @ 2022 by <span>PCNL FTA-DBMS</span> | All rights reserved!</div>
+
+   </section>
+
+</footer>
+
+<!-- footer section ends -->
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
